@@ -204,7 +204,7 @@ class I18n {
         // Update language button
         const langBtn = document.getElementById('lang-toggle');
         if (langBtn) {
-            langBtn.textContent = this.currentLang === 'en' ? '🇫🇷 Français' : '🇬🇧 English';
+            langBtn.textContent = this.currentLang === 'en' ? 'FR' : 'EN';
         }
 
         // Update HTML lang attribute
