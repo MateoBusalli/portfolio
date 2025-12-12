@@ -178,7 +178,7 @@ body {
 .card {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    padding: 4rem;
+    padding: 3rem;
     box-shadow: var(--shadow-md);
     transition: var(--transition);
     position: relative;
@@ -186,6 +186,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     height: 100%;
 }
 
