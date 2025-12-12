@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matéo Busalli - Contact">
+    <title data-i18n="contact">Contact</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <span>🛡️</span>
+                <span>Matéo Busalli</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" data-i18n="home">Home</a>
+                <a href="candidate.html" data-i18n="profile">Profile</a>
+                <a href="contact.html" data-i18n="contact">Contact</a>
+                <button id="lang-toggle" class="lang-toggle" onclick="i18n.toggleLanguage()">🇫🇷 Français</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container container-narrow">
+        <section class="section">
+            <div class="form">
+                <h2 class="section-title" data-i18n="contactTitle">Job Opportunity Form</h2>
+                <p class="card-text" style="margin-bottom: 2rem;" data-i18n="contactSubtitle">Please fill out this form to propose a job opportunity</p>
+
+                <form action="https://formspree.io/f/mkgqyobr" method="POST">
+                    <div class="form-group">
+                        <label class="form-label" for="recruiter-name">
+                            <span data-i18n="recruiterName">Recruiter Name</span>
+                            <span class="form-required">*</span>
+                        </label>
+                        <input type="text" id="recruiter-name" name="recruiter_name" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="recruiter-email">
+                            <span data-i18n="recruiterEmail">Recruiter Email</span>
+                            <span class="form-required">*</span>
+                        </label>
+                        <input type="email" id="recruiter-email" name="recruiter_email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="company-name">
+                            <span data-i18n="companyName">Company Name</span>
+                            <span class="form-required">*</span>
+                        </label>
+                        <input type="text" id="company-name" name="company_name" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="job-title">
+                            <span data-i18n="jobTitle">Job Title</span>
+                            <span class="form-required">*</span>
+                        </label>
+                        <input type="text" id="job-title" name="job_title" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="job-description">
+                            <span data-i18n="jobDescription">Job Description</span>
+                            <span class="form-required">*</span>
+                        </label>
+                        <textarea id="job-description" name="job_description" class="form-textarea" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="tasks">
+                            <span data-i18n="mainTasks">Main Tasks</span>
+                            <span class="form-required">*</span>
+                        </label>
+                        <textarea id="tasks" name="tasks" class="form-textarea" required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="start-date">
+                                <span data-i18n="startDate">Start Date</span>
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="date" id="start-date" name="start_date" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="end-date">
+                                <span data-i18n="endDate">End Date</span>
+                            </label>
+                            <input type="date" id="end-date" name="end_date" class="form-input">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="salary">
+                            <span data-i18n="salaryRange">Salary Range</span>
+                        </label>
+                        <input type="text" id="salary" name="salary" class="form-input" placeholder="Approximation">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="location">
+                            <span data-i18n="location">Location</span>
+                            <span class="form-required">*</span>
+                        </label>
+                        <input type="text" id="location" name="location" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="message">
+                            <span data-i18n="additionalMessage">Additional Message</span>
+                        </label>
+                        <textarea id="message" name="message" class="form-textarea"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-block" data-i18n="submit">Send Opportunity</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p><span data-i18n="email">Email</span>: mb@zlm.fr | <span data-i18n="address">Address</span>: <span data-i18n="footerText">06130 Grasse, France</span></p>
+        </div>
+    </footer>
+
+    <script src="./js/i18n.js"></script>
+</body>
+</html>

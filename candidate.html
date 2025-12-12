@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matéo Busalli - Candidate Profile">
+    <title data-i18n="profile">Profile</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <span>🛡️</span>
+                <span>Matéo Busalli</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" data-i18n="home">Home</a>
+                <a href="candidate.html" data-i18n="profile">Profile</a>
+                <a href="contact.html" data-i18n="contact">Contact</a>
+                <button id="lang-toggle" class="lang-toggle" onclick="i18n.toggleLanguage()">🇫🇷 Français</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Profile Section -->
+        <section class="section">
+            <div class="profile-header">
+                <h2 class="section-title" data-i18n="profileTitle">Profile</h2>
+                <div class="profile-content">
+                    <div class="profile-info">
+                        <div class="info-item">
+                            <span class="info-label" data-i18n="name">Name</span>
+                            <span>BUSALLI Matéo Corentin</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label" data-i18n="age">Age</span>
+                            <span>18</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label" data-i18n="nationality">Nationality</span>
+                            <span>France</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label" data-i18n="birthPlace">Place of birth</span>
+                            <span>Ecully (Lyon)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label" data-i18n="objective">Objective</span>
+                            <span data-i18n="objectiveText">Specialize in cybersecurity through BAC+5 (Master of Science) program at EPITECH</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label" data-i18n="residence">Residence location</span>
+                            <span>Nice</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label" data-i18n="sports">Sports</span>
+                            <span data-i18n="sportsText">Archery (7 years), Table Tennis (1 year), Tennis (4 years), Climbing (2 years)</span>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./images/mateo1.png" alt="Profile" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Three Column Section -->
+        <div class="grid grid-3">
+            <!-- Educational Background -->
+            <div class="card">
+                <h3 class="card-title" data-i18n="educationTitle">Educational Background</h3>
+                <div class="profile-info">
+                    <div class="info-item">
+                        <span class="info-label" data-i18n="college">College</span>
+                    </div>
+                    <p style="margin-left: 0; color: var(--text-light);">FENELON, Grasse, France</p>
+                    
+                    <div class="info-item">
+                        <span class="info-label" data-i18n="highSchool">High school</span>
+                    </div>
+                    <p style="margin-left: 0; color: var(--text-light);">FENELON, Grasse, France</p>
+                    <p style="margin-left: 0; color: var(--text-light);">┕ <span data-i18n="specialization">Specialization</span>: NSI (Computer Science) & AMC (English)</p>
+                    
+                    <div class="info-item">
+                        <span class="info-label" data-i18n="higherEd">Higher studies</span>
+                    </div>
+                    <p style="margin-left: 0; color: var(--text-light);">EPITECH, Nice, France</p>
+                    <p style="margin-left: 0; color: var(--text-light);">┕ <span data-i18n="specialization">Specialization</span>: Cybersecurity</p>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="card">
+                <h3 class="card-title" data-i18n="skillsTitle">Skills</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th data-i18n="codingLang">Coding Language</th>
+                            <th data-i18n="spokenLang">Spoken Language</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Python</td>
+                            <td id="lang-french">French</td>
+                        </tr>
+                        <tr>
+                            <td>SQL</td>
+                            <td id="lang-english">English</td>
+                        </tr>
+                        <tr>
+                            <td>HTML</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Experiences -->
+            <div class="card">
+                <h3 class="card-title" data-i18n="experiencesTitle">Experiences</h3>
+                
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span data-i18n="exp1Title">IT Technician</span>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="collapsible-body">
+                            <p data-i18n="exp1Type">Type: Fixed term contract</p>
+                            <p data-i18n="exp1Duration">Duration: One month</p>
+                            <p><span data-i18n="exp1Company">Company</span>: <a href="https://www.sequoiasoft.com/la-societe/" target="_blank">Septeo Hospitality (ex-Sequoiasoft)</a></p>
+                            <p data-i18n="exp1Tasks">Main tasks: Maintenance, Migrations & Interventions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span data-i18n="exp2Title">Construction Technical Inspector Assistant</span>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="collapsible-body">
+                            <p data-i18n="exp2Type">Type: Internship</p>
+                            <p data-i18n="exp2Duration">Duration: One week</p>
+                            <p><span data-i18n="exp1Company">Company</span>: <a href="https://www.groupe-qualiconsult.fr/le-groupe/" target="_blank">Qualiconsult</a></p>
+                            <p data-i18n="exp2Tasks">Main tasks: Assisting in controlling respectability of standards on construction sites</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Projects -->
+        <section class="section">
+            <div class="card">
+                <h3 class="section-title" data-i18n="projectsTitle">Personal Projects</h3>
+                
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span data-i18n="proj1Title">SQL Database for high school</span>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="collapsible-body">
+                            <p data-i18n="proj1Desc">Database collecting all statistics (~36k elements) from the French Parcoursup platform and sorting them according to different criterias on a dedicated website.</p>
+                            <p data-i18n="proj1Tech">Data are gathered from .xlsx files and converted to .csv to populate the DB.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span data-i18n="proj2Title">Bruteforce tool</span>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="collapsible-body">
+                            <p data-i18n="proj2Desc">Tool coded in Python that scans for subdomains and usernames using provided wordlist.</p>
+                            <p data-i18n="proj2Tech">A full cli interface is included.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header">
+                        <span data-i18n="proj3Title">Functional Website</span>
+                        <span class="collapsible-icon">▼</span>
+                    </div>
+                    <div class="collapsible-content">
+                        <div class="collapsible-body">
+                            <p data-i18n="proj3Desc">Website using JS, HTML and CSS for a fake travel agency with multiple pages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="section">
+            <div class="card">
+                <h3 class="section-title" data-i18n="certificationsTitle">Certifications</h3>
+                <div class="tags">
+                    <span class="tag" data-i18n="cert1">CEFR: English (B1+)</span>
+                    <span class="tag" data-i18n="cert2">ANSSI SecNum Academy</span>
+                    <span class="tag" data-i18n="cert3">PIX</span>
+                </div>
+                <div class="cert-images">
+                    <img src="./images/secnumacademie.png" alt="SecNum Academy">
+                    <img src="./images/logo-cefr.png" alt="CEFR">
+                    <img src="./images/pix.png" alt="PIX">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p><span data-i18n="email">Email</span>: mb@zlm.fr | <span data-i18n="address">Address</span>: <span data-i18n="footerText">06130 Grasse, France</span></p>
+        </div>
+    </footer>
+
+    <script src="./js/i18n.js"></script>
+    <script>
+        // Initialize collapsibles
+        document.querySelectorAll('.collapsible-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const collapsible = header.parentElement;
+                collapsible.classList.toggle('active');
+            });
+        });
+
+        // Update language-specific content
+        document.addEventListener('DOMContentLoaded', () => {
+            function updateLanguageContent() {
+                const lang = i18n.getCurrentLang();
+                document.getElementById('lang-french').textContent = lang === 'en' ? 'French' : 'Français';
+                document.getElementById('lang-english').textContent = lang === 'en' ? 'English' : 'Anglais';
+            }
+            updateLanguageContent();
+            
+            // Listen for language changes
+            const originalToggle = i18n.toggleLanguage;
+            i18n.toggleLanguage = function() {
+                originalToggle.call(this);
+                updateLanguageContent();
+            };
+        });
+    </script>
+</body>
+</html>
