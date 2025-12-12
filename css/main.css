@@ -185,7 +185,7 @@ body {
     min-height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100%;
 }
 
@@ -212,18 +212,18 @@ body {
 }
 
 .card-icon {
-    font-size: 4rem;
-    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
     display: block;
     color: var(--primary);
     font-weight: 700;
 }
 
 .card-title {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -231,7 +231,7 @@ body {
 .card-text {
     color: var(--text-light);
     line-height: 1.8;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .card-link {
