@@ -163,7 +163,7 @@ const translations = {
         
         // Footer
         email: 'Email',
-        address: 'Addresse',
+        address: 'Adresse',
         footerText: '06130 Grasse, France'
     }
 };
