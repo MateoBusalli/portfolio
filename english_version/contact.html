@@ -1,98 +1,372 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/antd@5.12.8/dist/reset.css">
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.cdnfonts.com/css/prestige-elite-std" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/ocr-a-std" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/vt323" rel="stylesheet">
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-    <title>Contact</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/antd@5.12.8/dist/antd.min.js"></script>
+    <title>Contact - Matéo Busalli</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1 class="title_font center typewriter">Intelligence Notice</h1>
-        </nav>
-        <a href="../index.html" class="back-button">← Back</a>
-        <a href="../fench_version/contact_fr.html" class="translate-button">French</a>
-        <hr>
-    </header>
+    <div id="root"></div>
 
-    <div class="box contact-container">
-        <h2 class="title_font center">Job Opportunity Form</h2>
-        <hr>
+    <script>
+        const { Layout, Card, Row, Col, Typography, Space, Button, Form, Input, DatePicker } = antd;
+        const { Header, Content, Footer } = Layout;
+        const { Title, Text } = Typography;
+        const { TextArea } = Input;
 
-        <form action="https://formspree.io/f/mkgqyobr" method="POST" class="contact-form">
+        const App = () => {
+            return React.createElement(Layout, { style: { minHeight: '100vh' } },
+                React.createElement(Header, {
+                    style: {
+                        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                        padding: '0 50px',
+                        boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+                    }
+                },
+                    React.createElement('div', {
+                        style: {
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                            maxWidth: '1200px',
+                            margin: '0 auto'
+                        }
+                    },
+                        React.createElement(Title, {
+                            level: 2,
+                            style: { color: 'white', margin: '16px 0' }
+                        }, 'Matéo Busalli'),
+                        React.createElement(Space, null,
+                            React.createElement(Button, {
+                                type: 'text',
+                                href: '../index.html',
+                                style: { color: 'white', fontSize: '16px' }
+                            }, '← Back'),
+                            React.createElement(Button, {
+                                type: 'text',
+                                href: '../fench_version/contact_fr.html',
+                                style: { color: 'white', fontSize: '16px' }
+                            }, '🇫🇷 Français')
+                        )
+                    )
+                ),
+                React.createElement(Content, { style: { padding: '50px' } },
+                    React.createElement('div', { style: { maxWidth: '800px', margin: '0 auto' } },
+                        React.createElement(Card, {
+                            style: {
+                                borderRadius: '12px',
+                                boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+                            }
+                        },
+                            React.createElement(Title, { level: 2, style: { textAlign: 'center' } }, 'Job Opportunity Form'),
+                            React.createElement(Text, {
+                                type: 'secondary',
+                                style: { display: 'block', textAlign: 'center', marginBottom: '32px' }
+                            }, 'Please fill out this form to propose a job opportunity'),
+                            React.createElement('form', {
+                                action: 'https://formspree.io/f/mkgqyobr',
+                                method: 'POST'
+                            },
+                                React.createElement('div', { style: { marginBottom: '24px' } },
+                                    React.createElement('label', {
+                                        htmlFor: 'recruiter-name',
+                                        style: {
+                                            display: 'block',
+                                            marginBottom: '8px',
+                                            fontWeight: '500'
+                                        }
+                                    }, 'Recruiter Name', React.createElement('span', { style: { color: 'red' } }, ' *')),
+                                    React.createElement('input', {
+                                        type: 'text',
+                                        id: 'recruiter-name',
+                                        name: 'recruiter_name',
+                                        required: true,
+                                        style: {
+                                            width: '100%',
+                                            padding: '8px 12px',
+                                            border: '1px solid #d9d9d9',
+                                            borderRadius: '6px',
+                                            fontSize: '14px'
+                                        }
+                                    })
+                                ),
+                                React.createElement('div', { style: { marginBottom: '24px' } },
+                                    React.createElement('label', {
+                                        htmlFor: 'recruiter-email',
+                                        style: {
+                                            display: 'block',
+                                            marginBottom: '8px',
+                                            fontWeight: '500'
+                                        }
+                                    }, 'Recruiter Email', React.createElement('span', { style: { color: 'red' } }, ' *')),
+                                    React.createElement('input', {
+                                        type: 'email',
+                                        id: 'recruiter-email',
+                                        name: 'recruiter_email',
+                                        required: true,
+                                        style: {
+                                            width: '100%',
+                                            padding: '8px 12px',
+                                            border: '1px solid #d9d9d9',
+                                            borderRadius: '6px',
+                                            fontSize: '14px'
+                                        }
+                                    })
+                                ),
+                                React.createElement('div', { style: { marginBottom: '24px' } },
+                                    React.createElement('label', {
+                                        htmlFor: 'company-name',
+                                        style: {
+                                            display: 'block',
+                                            marginBottom: '8px',
+                                            fontWeight: '500'
+                                        }
+                                    }, 'Company Name', React.createElement('span', { style: { color: 'red' } }, ' *')),
+                                    React.createElement('input', {
+                                        type: 'text',
+                                        id: 'company-name',
+                                        name: 'company_name',
+                                        required: true,
+                                        style: {
+                                            width: '100%',
+                                            padding: '8px 12px',
+                                            border: '1px solid #d9d9d9',
+                                            borderRadius: '6px',
+                                            fontSize: '14px'
+                                        }
+                                    })
+                                ),
+                                React.createElement('div', { style: { marginBottom: '24px' } },
+                                    React.createElement('label', {
+                                        htmlFor: 'job-title',
+                                        style: {
+                                            display: 'block',
+                                            marginBottom: '8px',
+                                            fontWeight: '500'
+                                        }
+                                    }, 'Job Title', React.createElement('span', { style: { color: 'red' } }, ' *')),
+                                    React.createElement('input', {
+                                        type: 'text',
+                                        id: 'job-title',
+                                        name: 'job_title',
+                                        required: true,
+                                        style: {
+                                            width: '100%',
+                                            padding: '8px 12px',
+                                            border: '1px solid #d9d9d9',
+                                            borderRadius: '6px',
+                                            fontSize: '14px'
+                                        }
+                                    })
+                                ),
+                                React.createElement('div', { style: { marginBottom: '24px' } },
+                                    React.createElement('label', {
+                                        htmlFor: 'job-description',
+                                        style: {
+                                            display: 'block',
+                                            marginBottom: '8px',
+                                            fontWeight: '500'
+                                        }
+                                    }, 'Job Description', React.createElement('span', { style: { color: 'red' } }, ' *')),
+                                    React.createElement('textarea', {
+                                        id: 'job-description',
+                                        name: 'job_description',
+                                        rows: 4,
+                                        required: true,
+                                        style: {
+                                            width: '100%',
+                                            padding: '8px 12px',
+                                            border: '1px solid #d9d9d9',
+                                            borderRadius: '6px',
+                                            fontSize: '14px',
+                                            fontFamily: 'inherit'
+                                        }
+                                    })
+                                ),
+                                React.createElement('div', { style: { marginBottom: '24px' } },
+                                    React.createElement('label', {
+                                        htmlFor: 'tasks',
+                                        style: {
+                                            display: 'block',
+                                            marginBottom: '8px',
+                                            fontWeight: '500'
+                                        }
+                                    }, 'Main Tasks', React.createElement('span', { style: { color: 'red' } }, ' *')),
+                                    React.createElement('textarea', {
+                                        id: 'tasks',
+                                        name: 'tasks',
+                                        rows: 4,
+                                        required: true,
+                                        style: {
+                                            width: '100%',
+                                            padding: '8px 12px',
+                                            border: '1px solid #d9d9d9',
+                                            borderRadius: '6px',
+                                            fontSize: '14px',
+                                            fontFamily: 'inherit'
+                                        }
+                                    })
+                                ),
+                                React.createElement('div', { style: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '24px' } },
+                                    React.createElement('div', null,
+                                        React.createElement('label', {
+                                            htmlFor: 'start-date',
+                                            style: {
+                                                display: 'block',
+                                                marginBottom: '8px',
+                                                fontWeight: '500'
+                                            }
+                                        }, 'Start Date', React.createElement('span', { style: { color: 'red' } }, ' *')),
+                                        React.createElement('input', {
+                                            type: 'date',
+                                            id: 'start-date',
+                                            name: 'start_date',
+                                            required: true,
+                                            style: {
+                                                width: '100%',
+                                                padding: '8px 12px',
+                                                border: '1px solid #d9d9d9',
+                                                borderRadius: '6px',
+                                                fontSize: '14px'
+                                            }
+                                        })
+                                    ),
+                                    React.createElement('div', null,
+                                        React.createElement('label', {
+                                            htmlFor: 'end-date',
+                                            style: {
+                                                display: 'block',
+                                                marginBottom: '8px',
+                                                fontWeight: '500'
+                                            }
+                                        }, 'End Date'),
+                                        React.createElement('input', {
+                                            type: 'date',
+                                            id: 'end-date',
+                                            name: 'end_date',
+                                            style: {
+                                                width: '100%',
+                                                padding: '8px 12px',
+                                                border: '1px solid #d9d9d9',
+                                                borderRadius: '6px',
+                                                fontSize: '14px'
+                                            }
+                                        })
+                                    )
+                                ),
+                                React.createElement('div', { style: { marginBottom: '24px' } },
+                                    React.createElement('label', {
+                                        htmlFor: 'salary',
+                                        style: {
+                                            display: 'block',
+                                            marginBottom: '8px',
+                                            fontWeight: '500'
+                                        }
+                                    }, 'Salary Range'),
+                                    React.createElement('input', {
+                                        type: 'text',
+                                        id: 'salary',
+                                        name: 'salary',
+                                        placeholder: 'Approximation',
+                                        style: {
+                                            width: '100%',
+                                            padding: '8px 12px',
+                                            border: '1px solid #d9d9d9',
+                                            borderRadius: '6px',
+                                            fontSize: '14px'
+                                        }
+                                    })
+                                ),
+                                React.createElement('div', { style: { marginBottom: '24px' } },
+                                    React.createElement('label', {
+                                        htmlFor: 'location',
+                                        style: {
+                                            display: 'block',
+                                            marginBottom: '8px',
+                                            fontWeight: '500'
+                                        }
+                                    }, 'Location', React.createElement('span', { style: { color: 'red' } }, ' *')),
+                                    React.createElement('input', {
+                                        type: 'text',
+                                        id: 'location',
+                                        name: 'location',
+                                        required: true,
+                                        style: {
+                                            width: '100%',
+                                            padding: '8px 12px',
+                                            border: '1px solid #d9d9d9',
+                                            borderRadius: '6px',
+                                            fontSize: '14px'
+                                        }
+                                    })
+                                ),
+                                React.createElement('div', { style: { marginBottom: '24px' } },
+                                    React.createElement('label', {
+                                        htmlFor: 'message',
+                                        style: {
+                                            display: 'block',
+                                            marginBottom: '8px',
+                                            fontWeight: '500'
+                                        }
+                                    }, 'Additional Message'),
+                                    React.createElement('textarea', {
+                                        id: 'message',
+                                        name: 'message',
+                                        rows: 3,
+                                        style: {
+                                            width: '100%',
+                                            padding: '8px 12px',
+                                            border: '1px solid #d9d9d9',
+                                            borderRadius: '6px',
+                                            fontSize: '14px',
+                                            fontFamily: 'inherit'
+                                        }
+                                    })
+                                ),
+                                React.createElement('button', {
+                                    type: 'submit',
+                                    style: {
+                                        width: '100%',
+                                        padding: '12px 24px',
+                                        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                                        color: 'white',
+                                        border: 'none',
+                                        borderRadius: '6px',
+                                        fontSize: '16px',
+                                        fontWeight: '500',
+                                        cursor: 'pointer',
+                                        transition: 'opacity 0.3s'
+                                    },
+                                    onMouseOver: function(e) { e.target.style.opacity = '0.9'; },
+                                    onMouseOut: function(e) { e.target.style.opacity = '1'; }
+                                }, 'Send Opportunity')
+                            )
+                        )
+                    )
+                ),
+                React.createElement(Footer, {
+                    style: {
+                        textAlign: 'center',
+                        background: '#f0f2f5',
+                        borderTop: '1px solid #d9d9d9'
+                    }
+                },
+                    React.createElement(Text, null, 'Email: mb@zlm.fr | Address: 06130 Grasse, France')
+                )
+            );
+        };
 
-            <div class="form-group">
-                <label for="recruiter-name">Recruiter Name:</label>
-                <input type="text" id="recruiter-name" name="recruiter_name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="recruiter-email">Recruiter Email:</label>
-                <input type="email" id="recruiter-email" name="recruiter_email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="company-name">Company Name:</label>
-                <input type="text" id="company-name" name="company_name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="job-title">Job Title:</label>
-                <input type="text" id="job-title" name="job_title" required>
-            </div>
-
-            <div class="form-group">
-                <label for="job-description">Job Description:</label>
-                <textarea id="job-description" name="job_description" rows="4" required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="tasks">Main Tasks:</label>
-                <textarea id="tasks" name="tasks" rows="4" required></textarea>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="start-date">Start Date:</label>
-                    <input type="date" id="start-date" name="start_date" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="end-date">End Date:</label>
-                    <input type="date" id="end-date" name="end_date">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="salary">Salary Range:</label>
-                <input type="text" id="salary" name="salary" placeholder="Approximation">
-            </div>
-
-            <div class="form-group">
-                <label for="location">Location:</label>
-                <input type="text" id="location" name="location" required>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Additional Message:</label>
-                <textarea id="message" name="message" rows="3"></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn">Send Opportunity</button>
-        </form>
-    </div>
-
-    <hr>
-    <footer class="box">
-        <address>
-            Email: mb@zlm.fr | Address: 06130 Grasse, France
-        </address>
-    </footer>
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(React.createElement(App));
+    </script>
 </body>
 
 </html>

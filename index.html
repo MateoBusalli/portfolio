@@ -1,42 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/antd@5.12.8/dist/reset.css">
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.cdnfonts.com/css/prestige-elite-std" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/ocr-a-std" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/vt323" rel="stylesheet">
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-    <title>Folder Selection</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/antd@5.12.8/dist/antd.min.js"></script>
+    <title>Matéo Busalli - Portfolio</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1 class="title_font center typewriter">Intelligence Notice</h1>
-        </nav>
-        <a href="./fench_version/index_fr.html" class="translate-button">French</a>
-        <hr>
-    </header>
-    <div class="box header-box">
-        <h2 class="title_font center">Select a folder<div class="blink-dot">.</div>
-        </h2>
-        <hr>
-        <div class="container">
-            <a href="./english_version/candidate.html" class="folder-item folder-name">
-                <div class="folder-name">Candidate profile</div>→
-            </a>
-            <a href="./english_version/contact.html" class="folder-item">
-                <div class="folder-name"> Contact</div>→
-            </a>
-        </div>
-    </div>
-    <hr>
-    <footer class="box">
-        <address>
-            Email: mb@zlm.fr | Address: 06130 Grasse, France
-        </address>
-    </footer>
+    <div id="root"></div>
+
+    <script>
+        const { Layout, Menu, Card, Row, Col, Typography, Space, Button } = antd;
+        const { Header, Content, Footer } = Layout;
+        const { Title, Text } = Typography;
+
+        const App = () => {
+            return React.createElement(Layout, { style: { minHeight: '100vh' } },
+                React.createElement(Header, {
+                    style: {
+                        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                        padding: '0 50px',
+                        boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+                    }
+                },
+                    React.createElement('div', {
+                        style: {
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                            maxWidth: '1200px',
+                            margin: '0 auto'
+                        }
+                    },
+                        React.createElement(Title, {
+                            level: 2,
+                            style: { color: 'white', margin: '16px 0' }
+                        }, 'Matéo Busalli'),
+                        React.createElement(Button, {
+                            type: 'text',
+                            href: './fench_version/index_fr.html',
+                            style: { color: 'white', fontSize: '16px' }
+                        }, '🇫🇷 Français')
+                    )
+                ),
+                React.createElement(Content, { style: { padding: '50px' } },
+                    React.createElement('div', { style: { maxWidth: '1200px', margin: '0 auto' } },
+                        React.createElement(Title, {
+                            level: 1,
+                            style: {
+                                textAlign: 'center',
+                                marginBottom: '50px',
+                                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                                backgroundClip: 'text'
+                            }
+                        }, 'Welcome to My Portfolio'),
+                        React.createElement(Row, { gutter: [32, 32], justify: 'center' },
+                            React.createElement(Col, { xs: 24, sm: 24, md: 12, lg: 10 },
+                                React.createElement(Card, {
+                                    hoverable: true,
+                                    style: {
+                                        height: '100%',
+                                        borderRadius: '12px',
+                                        boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                                        transition: 'all 0.3s ease'
+                                    },
+                                    onClick: () => window.location.href = './english_version/candidate.html'
+                                },
+                                    React.createElement('div', {
+                                        style: {
+                                            textAlign: 'center',
+                                            padding: '40px 20px'
+                                        }
+                                    },
+                                        React.createElement('div', {
+                                            style: {
+                                                fontSize: '64px',
+                                                marginBottom: '24px'
+                                            }
+                                        }, '👤'),
+                                        React.createElement(Title, { level: 3 }, 'Candidate Profile'),
+                                        React.createElement(Text, { type: 'secondary' },
+                                            'Discover my education, skills, experiences, and projects')
+                                    )
+                                )
+                            ),
+                            React.createElement(Col, { xs: 24, sm: 24, md: 12, lg: 10 },
+                                React.createElement(Card, {
+                                    hoverable: true,
+                                    style: {
+                                        height: '100%',
+                                        borderRadius: '12px',
+                                        boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                                        transition: 'all 0.3s ease'
+                                    },
+                                    onClick: () => window.location.href = './english_version/contact.html'
+                                },
+                                    React.createElement('div', {
+                                        style: {
+                                            textAlign: 'center',
+                                            padding: '40px 20px'
+                                        }
+                                    },
+                                        React.createElement('div', {
+                                            style: {
+                                                fontSize: '64px',
+                                                marginBottom: '24px'
+                                            }
+                                        }, '📧'),
+                                        React.createElement(Title, { level: 3 }, 'Contact'),
+                                        React.createElement(Text, { type: 'secondary' },
+                                            'Get in touch for job opportunities')
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
+                React.createElement(Footer, {
+                    style: {
+                        textAlign: 'center',
+                        background: '#f0f2f5',
+                        borderTop: '1px solid #d9d9d9'
+                    }
+                },
+                    React.createElement(Text, null, 'Email: mb@zlm.fr | Address: 06130 Grasse, France')
+                )
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(React.createElement(App));
+    </script>
 </body>
 
 </html>

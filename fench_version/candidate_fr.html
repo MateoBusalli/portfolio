@@ -1,157 +1,306 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/antd@5.12.8/dist/reset.css">
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.cdnfonts.com/css/prestige-elite-std" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/ocr-a-std" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/vt323" rel="stylesheet">
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-    <title>Profil du candidat</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/antd@5.12.8/dist/antd.min.js"></script>
+    <title>Profil du Candidat - Matéo Busalli</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1 class="title_font center typewriter">Intelligence Notice</h1>
-        </nav>
-        <a href="./index_fr.html" class="back-button">← Retour</a>
-        <a href="../english_version/candidate.html" class="translate-button">Anglais</a>
-        <hr>
-    </header>
-    <div class="box">
-        <div class="box child">
-            <h2 class="title_font center">Profil</h2>
-            <hr>
-            <section class="section">
-                <P class="child">
-                    Nom & Prénoms: BUSALLI Matéo Corentin<br><br>
-                    Âge: 18<br><br>
-                    Nationalité: France<br><br>
-                    Lieu de naissance: Ecully (Lyon)<br><br>
-                    Objectif: Spécialisation en cybersécurité par le programme BAC+5 (Master of Science)
-                    d'EPITECH.<br><br>
-                    Lieu de résidence: Nice<br><br>
-                    Sports (précédents inclus): Tir à l'arc (7 ans), Tennis de Table(1 an), Tennis(4 ans), Escalade(2
-                    ans).
-                </P>
-                <div class="child marginimg onright">
-                    <img class="imgprofile box" src="../images/mateo1.png">
-                </div>
-            </section>
-        </div>
-        <section class="section">
-            <div class="box child">
-                <h3 class="title_font center">Parcours Éducatif</h3>
-                <hr>
-                <P>
-                    College: FENELON, Grasse, France<br><br>
-                    Lycée: FENELON, Grasse, France<br>
-                    ┕ Specialité: NSI (Science de l'informatique) & AMC (Englais)<br><br>
-                    Études supérieures: EPITECH, Nice, France<br>
-                    ┕ Specialité: Cybersecurity
-                </P>
-            </div>
-            <div class="box child">
-                <h3 class="title_font center">Compétences</h3>
-                <hr>
-                <table>
-                    <tr>
-                        <th class="title_font">Langages codés</th>
-                        <th class="title_font">Langages écrits</th>
-                    </tr>
-                    <tr>
-                        <th>Python</th>
-                        <th>Français</th>
-                    </tr>
-                    <tr>
-                        <th>SQL</th>
-                        <th>Anglais</th>
-                    </tr>
-                    <tr>
-                        <th>HTML</th>
-                    </tr>
-                    <tr>
-                        <th>CSS</th>
-                    </tr>
-                </table>
-            </div>
-            <div class="box child">
-                <h3 class="title_font center">Expériences</h3>
-                <hr>
-                <details>
-                    <summary class="title_font">Technicien Informatique</summary>
-                    <p>
-                        ┕ Type: CDD<br>
-                        ┕ Durée: Un mois.<br>
-                        ┕ Société: <a href="https://www.sequoiasoft.com/la-societe/" target="_blank">Septeo Hospitality
-                            (ex-Sequoiasoft)</a><br>
-                        ┕ Tâches principales: Maintenance, Migrations & Interventions<br><br>
-                    </p>
-                </details>
-                <details>
-                    <summary class="title_font">Assistant Contrôleur Technique en BTP</summary>
-                    <p>
-                        ┕ Type: Stage<br>
-                        ┕ Durée: Une semaine.<br>
-                        ┕ Société: <a href="https://www.groupe-qualiconsult.fr/le-groupe/"
-                            target="_blank">Qualiconsult</a><br>
-                        ┕ Tâches principales: Contrôle de la respectabilité des normes sur les chantiers.
-                    </p>
-                </details>
-            </div>
-            <div class="box child">
-                <h3 class="title_font center">Projets personnels</h3>
-                <hr>
-                <details>
-                    <summary class="title_font">Base de données SQL pour mon lycée</summary>
-                    <p>
-                        ┕ Base de données collectant des statistiques (~36k éléments) de la plateforme française
-                        Parcoursup et triant ces données en fonction de différents critères sur un site dédié.
-                        ┕ Les données sont récupérées depuis des fichiers .xlsx et converties au format .csv pour
-                        peupler la BDD.
-                    </p>
-                </details>
-                <details>
-                    <summary class="title_font">Outil de Bruteforce</summary>
-                    <p>
-                        ┕ Outil codé en Python qui scan les sous-domaines et noms d'utilisateurs à partir d'une
-                        wordlist.<br>
-                        ┕ Une interface cli complète est incluse.
-                    </p>
-                </details>
-                <details>
-                    <summary class="title_font">Site web fonctionnel</summary>
-                    <p>
-                        ┕ Site web utilisant du JS, HTML et du CSS pour une fausse agence de voyage, comprend plusieurs
-                        pages.<br>
-                    </p>
-                </details>
-            </div>
-        </section>
-        <div class="box child">
-            <h3 class="title_font center">Certifications</h3>
-            <hr>
-            <section class="section">
-                <p class="child">
-                    • CEFR: Anglais (B1+)<br><br>
-                    • ANSSI SecNum Academy<br><br>
-                    • PIX
-                </p>
-                <div class="child">
-                    <img class="imgcert" src="../images/secnumacademie.png">
-                    <img class="imgcert" src="../images/logo-cefr.png">
-                    <img class="imgcert" src="../images/pix.png">
-                </div>
-            </section>
-        </div>
-    </div>
-    <hr>
-    <footer class="box">
-        <address>
-            Email: mb@zlm.fr | Addresse: 06130 Grasse, France
-        </address>
-    </footer>
+    <div id="root"></div>
+
+    <script>
+        const { Layout, Card, Row, Col, Typography, Space, Button, Tag, Divider, Avatar, Table, Collapse } = antd;
+        const { Header, Content, Footer } = Layout;
+        const { Title, Text, Paragraph } = Typography;
+
+        const App = () => {
+            const skillsData = [
+                { key: '1', coding: 'Python', language: 'Français' },
+                { key: '2', coding: 'SQL', language: 'Anglais' },
+                { key: '3', coding: 'HTML', language: '' },
+                { key: '4', coding: 'CSS', language: '' },
+            ];
+
+            const skillsColumns = [
+                { title: 'Langages codés', dataIndex: 'coding', key: 'coding' },
+                { title: 'Langages écrits', dataIndex: 'language', key: 'language' },
+            ];
+
+            const experiencesItems = [
+                {
+                    key: '1',
+                    label: React.createElement('strong', null, 'Technicien Informatique'),
+                    children: React.createElement('div', null,
+                        React.createElement('p', null, '┕ Type: CDD'),
+                        React.createElement('p', null, '┕ Durée: Un mois'),
+                        React.createElement('p', null,
+                            '┕ Société: ',
+                            React.createElement('a', {
+                                href: 'https://www.sequoiasoft.com/la-societe/',
+                                target: '_blank'
+                            }, 'Septeo Hospitality (ex-Sequoiasoft)')
+                        ),
+                        React.createElement('p', null, '┕ Tâches principales: Maintenance, Migrations & Interventions')
+                    )
+                },
+                {
+                    key: '2',
+                    label: React.createElement('strong', null, 'Assistant Contrôleur Technique en BTP'),
+                    children: React.createElement('div', null,
+                        React.createElement('p', null, '┕ Type: Stage'),
+                        React.createElement('p', null, '┕ Durée: Une semaine'),
+                        React.createElement('p', null,
+                            '┕ Société: ',
+                            React.createElement('a', {
+                                href: 'https://www.groupe-qualiconsult.fr/le-groupe/',
+                                target: '_blank'
+                            }, 'Qualiconsult')
+                        ),
+                        React.createElement('p', null, '┕ Tâches principales: Contrôle de la respectabilité des normes sur les chantiers')
+                    )
+                }
+            ];
+
+            const projectsItems = [
+                {
+                    key: '1',
+                    label: React.createElement('strong', null, 'Base de données SQL pour mon lycée'),
+                    children: React.createElement('div', null,
+                        React.createElement('p', null, '┕ Base de données collectant des statistiques (~36k éléments) de la plateforme française Parcoursup et triant ces données en fonction de différents critères sur un site dédié.'),
+                        React.createElement('p', null, '┕ Les données sont récupérées depuis des fichiers .xlsx et converties au format .csv pour peupler la BDD.')
+                    )
+                },
+                {
+                    key: '2',
+                    label: React.createElement('strong', null, 'Outil de Bruteforce'),
+                    children: React.createElement('div', null,
+                        React.createElement('p', null, '┕ Outil codé en Python qui scan les sous-domaines et noms d\'utilisateurs à partir d\'une wordlist.'),
+                        React.createElement('p', null, '┕ Une interface cli complète est incluse.')
+                    )
+                },
+                {
+                    key: '3',
+                    label: React.createElement('strong', null, 'Site web fonctionnel'),
+                    children: React.createElement('p', null, '┕ Site web utilisant du JS, HTML et du CSS pour une fausse agence de voyage, comprend plusieurs pages.')
+                }
+            ];
+
+            return React.createElement(Layout, { style: { minHeight: '100vh' } },
+                React.createElement(Header, {
+                    style: {
+                        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                        padding: '0 50px',
+                        boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+                    }
+                },
+                    React.createElement('div', {
+                        style: {
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                            maxWidth: '1200px',
+                            margin: '0 auto'
+                        }
+                    },
+                        React.createElement(Title, {
+                            level: 2,
+                            style: { color: 'white', margin: '16px 0' }
+                        }, 'Matéo Busalli'),
+                        React.createElement(Space, null,
+                            React.createElement(Button, {
+                                type: 'text',
+                                href: 'index_fr.html',
+                                style: { color: 'white', fontSize: '16px' }
+                            }, '← Retour'),
+                            React.createElement(Button, {
+                                type: 'text',
+                                href: '../english_version/candidate.html',
+                                style: { color: 'white', fontSize: '16px' }
+                            }, '🇬🇧 English')
+                        )
+                    )
+                ),
+                React.createElement(Content, { style: { padding: '50px' } },
+                    React.createElement('div', { style: { maxWidth: '1200px', margin: '0 auto' } },
+                        // Profile Section
+                        React.createElement(Card, {
+                            style: {
+                                borderRadius: '12px',
+                                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                                marginBottom: '32px'
+                            }
+                        },
+                            React.createElement(Row, { gutter: [32, 32], align: 'middle' },
+                                React.createElement(Col, { xs: 24, md: 16 },
+                                    React.createElement(Title, { level: 2 }, 'Profil'),
+                                    React.createElement(Divider, { style: { margin: '16px 0' } }),
+                                    React.createElement(Space, { direction: 'vertical', size: 'middle' },
+                                        React.createElement(Text, null, React.createElement('strong', null, 'Nom & Prénoms: '), 'BUSALLI Matéo Corentin'),
+                                        React.createElement(Text, null, React.createElement('strong', null, 'Âge: '), '18'),
+                                        React.createElement(Text, null, React.createElement('strong', null, 'Nationalité: '), 'France'),
+                                        React.createElement(Text, null, React.createElement('strong', null, 'Lieu de naissance: '), 'Ecully (Lyon)'),
+                                        React.createElement(Text, null, React.createElement('strong', null, 'Objectif: '), 'Spécialisation en cybersécurité par le programme BAC+5 (Master of Science) d\'EPITECH'),
+                                        React.createElement(Text, null, React.createElement('strong', null, 'Lieu de résidence: '), 'Nice'),
+                                        React.createElement(Text, null, React.createElement('strong', null, 'Sports: '), 'Tir à l\'arc (7 ans), Tennis de Table (1 an), Tennis (4 ans), Escalade (2 ans)')
+                                    )
+                                ),
+                                React.createElement(Col, { xs: 24, md: 8, style: { textAlign: 'center' } },
+                                    React.createElement('img', {
+                                        src: '../images/mateo1.png',
+                                        alt: 'Profil',
+                                        style: {
+                                            maxWidth: '100%',
+                                            borderRadius: '12px',
+                                            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+                                        }
+                                    })
+                                )
+                            )
+                        ),
+
+                        // 3-Column Section
+                        React.createElement(Row, { gutter: [24, 24] },
+                            // Educational Background
+                            React.createElement(Col, { xs: 24, lg: 8 },
+                                React.createElement(Card, {
+                                    title: React.createElement(Title, { level: 3, style: { margin: 0 } }, 'Parcours Éducatif'),
+                                    style: {
+                                        height: '100%',
+                                        borderRadius: '12px',
+                                        boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+                                    }
+                                },
+                                    React.createElement(Space, { direction: 'vertical', size: 'middle' },
+                                        React.createElement(Text, null, React.createElement('strong', null, 'Collège: '), 'FENELON, Grasse, France'),
+                                        React.createElement('div', null,
+                                            React.createElement(Text, null, React.createElement('strong', null, 'Lycée: '), 'FENELON, Grasse, France'),
+                                            React.createElement('br', null),
+                                            React.createElement(Text, { type: 'secondary' }, '┕ Spécialité: NSI (Science de l\'informatique) & AMC (Anglais)')
+                                        ),
+                                        React.createElement('div', null,
+                                            React.createElement(Text, null, React.createElement('strong', null, 'Études supérieures: '), 'EPITECH, Nice, France'),
+                                            React.createElement('br', null),
+                                            React.createElement(Text, { type: 'secondary' }, '┕ Spécialité: Cybersécurité')
+                                        )
+                                    )
+                                )
+                            ),
+
+                            // Skills
+                            React.createElement(Col, { xs: 24, lg: 8 },
+                                React.createElement(Card, {
+                                    title: React.createElement(Title, { level: 3, style: { margin: 0 } }, 'Compétences'),
+                                    style: {
+                                        height: '100%',
+                                        borderRadius: '12px',
+                                        boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+                                    }
+                                },
+                                    React.createElement(Table, {
+                                        dataSource: skillsData,
+                                        columns: skillsColumns,
+                                        pagination: false,
+                                        size: 'small'
+                                    })
+                                )
+                            ),
+
+                            // Experiences
+                            React.createElement(Col, { xs: 24, lg: 8 },
+                                React.createElement(Card, {
+                                    title: React.createElement(Title, { level: 3, style: { margin: 0 } }, 'Expériences'),
+                                    style: {
+                                        height: '100%',
+                                        borderRadius: '12px',
+                                        boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+                                    }
+                                },
+                                    React.createElement(Collapse, {
+                                        items: experiencesItems,
+                                        ghost: true
+                                    })
+                                )
+                            )
+                        ),
+
+                        // Personal Projects
+                        React.createElement(Card, {
+                            title: React.createElement(Title, { level: 3, style: { margin: 0 } }, 'Projets Personnels'),
+                            style: {
+                                borderRadius: '12px',
+                                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                                marginTop: '24px'
+                            }
+                        },
+                            React.createElement(Collapse, {
+                                items: projectsItems,
+                                ghost: true
+                            })
+                        ),
+
+                        // Certifications
+                        React.createElement(Card, {
+                            title: React.createElement(Title, { level: 3, style: { margin: 0 } }, 'Certifications'),
+                            style: {
+                                borderRadius: '12px',
+                                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                                marginTop: '24px'
+                            }
+                        },
+                            React.createElement(Row, { gutter: [32, 32], align: 'middle' },
+                                React.createElement(Col, { xs: 24, md: 12 },
+                                    React.createElement(Space, { direction: 'vertical', size: 'middle' },
+                                        React.createElement(Tag, { color: 'blue' }, 'CEFR: Anglais (B1+)'),
+                                        React.createElement(Tag, { color: 'green' }, 'ANSSI SecNum Academy'),
+                                        React.createElement(Tag, { color: 'purple' }, 'PIX')
+                                    )
+                                ),
+                                React.createElement(Col, { xs: 24, md: 12 },
+                                    React.createElement(Space, { size: 'large', wrap: true },
+                                        React.createElement('img', {
+                                            src: '../images/secnumacademie.png',
+                                            alt: 'SecNum Academy',
+                                            style: { height: '60px' }
+                                        }),
+                                        React.createElement('img', {
+                                            src: '../images/logo-cefr.png',
+                                            alt: 'CEFR',
+                                            style: { height: '60px' }
+                                        }),
+                                        React.createElement('img', {
+                                            src: '../images/pix.png',
+                                            alt: 'PIX',
+                                            style: { height: '60px' }
+                                        })
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
+                React.createElement(Footer, {
+                    style: {
+                        textAlign: 'center',
+                        background: '#f0f2f5',
+                        borderTop: '1px solid #d9d9d9'
+                    }
+                },
+                    React.createElement(Text, null, 'Email: mb@zlm.fr | Addresse: 06130 Grasse, France')
+                )
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(React.createElement(App));
+    </script>
 </body>
 
 </html>
