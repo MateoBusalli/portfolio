@@ -617,28 +617,17 @@ a:hover {
     background: var(--accent);
 }
 
-/* Typewriter Animation */
-.typewriter {
+/* Typewriter cursor */
+.hero h1 .cursor {
     display: inline-block;
-    border-right: 3px solid var(--primary);
-    padding-right: 5px;
-    animation: typing 2s steps(13) 1s forwards, blink 0.75s step-end infinite;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 13ch;
-    }
+    width: 3px;
+    background-color: var(--primary);
+    margin-left: 5px;
+    animation: blink 0.75s step-end infinite;
 }
 
 @keyframes blink {
     50% {
-        border-color: transparent;
+        opacity: 0;
     }
 }
