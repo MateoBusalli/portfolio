@@ -590,6 +590,10 @@ a:hover {
         flex-wrap: wrap;
     }
 
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
     .profile-content {
         grid-template-columns: 1fr;
     }
@@ -619,6 +623,10 @@ a:hover {
     .info-label {
         min-width: 100px;
         font-size: 0.75rem;
+    }
+
+    .card {
+        padding: 2rem;
     }
 }
 
