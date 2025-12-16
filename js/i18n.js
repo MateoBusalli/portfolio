@@ -38,12 +38,10 @@ const translations = {
         experiencesTitle: 'Experiences',
         exp1Title: 'IT Technician',
         exp1Type: 'Type: Fixed term contract',
-        exp1Duration: 'Duration: One month',
         exp1Company: 'Company',
         exp1Tasks: 'Main tasks: Maintenance, Migrations & Interventions',
         exp2Title: 'Construction Technical Inspector Assistant',
         exp2Type: 'Type: Internship',
-        exp2Duration: 'Duration: One week',
         exp2Tasks: 'Main tasks: Assisting in controlling respectability of standards on construction sites',
         
         projectsTitle: 'Personal Projects',
@@ -116,17 +114,15 @@ const translations = {
         
         skillsTitle: 'Compétences',
         codingLang: 'Langages codés',
-        spokenLang: 'Langages écrits',
+        spokenLang: 'Langages parlés',
         
         experiencesTitle: 'Expériences',
         exp1Title: 'Technicien Informatique',
         exp1Type: 'Type: CDD',
-        exp1Duration: 'Durée: Un mois',
         exp1Company: 'Société',
         exp1Tasks: 'Tâches principales: Maintenance, Migrations & Interventions',
         exp2Title: 'Assistant Contrôleur Technique en BTP',
         exp2Type: 'Type: Stage',
-        exp2Duration: 'Durée: Une semaine',
         exp2Tasks: 'Tâches principales: Contrôle de la respectabilité des normes sur les chantiers',
         
         projectsTitle: 'Projets Personnels',
