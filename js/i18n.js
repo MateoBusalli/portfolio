@@ -80,7 +80,8 @@ const translations = {
         email: 'Email',
         address: 'Address',
         footerText: '06130 Grasse, France',
-        contactme: 'Use Contact form to contact me'
+        contactmePrefix: 'Use',
+        contactmeSuffix: 'form to contact me'
     },
     fr: {
         // Navigation
@@ -159,7 +160,8 @@ const translations = {
         required: 'Requis',
         
         // Footer
-        contactme: 'Utilisez le formulaire de Contact pour me contacter',
+        contactmePrefix: 'Utilisez le formulaire de',
+        contactmeSuffix: 'pour me contacter.',
     }
 };
 
