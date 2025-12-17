@@ -79,7 +79,8 @@ const translations = {
         // Footer
         email: 'Email',
         address: 'Address',
-        footerText: '06130 Grasse, France'
+        footerText: '06130 Grasse, France',
+        contactme: 'Use Contact form to contact me'
     },
     fr: {
         // Navigation
@@ -158,9 +159,7 @@ const translations = {
         required: 'Requis',
         
         // Footer
-        email: 'Email',
-        address: 'Adresse',
-        footerText: '06130 Grasse, France'
+        contactme: 'Utilisez le formulaire de Contact pour me contacter',
     }
 };
 
