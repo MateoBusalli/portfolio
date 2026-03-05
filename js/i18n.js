@@ -4,16 +4,17 @@ const translations = {
         // Navigation
         home: 'Home',
         profile: 'Profile',
-        mainprofile: 'PROFILE',
+        mainprofile: '[PROFILE]',
+        maincontact: '[CONTACT]',
         contact: 'Contact',
-        
+
         // Home Page
         welcome: 'Welcome to My Portfolio',
         profileCard: 'Candidate Profile',
         profileDesc: 'Discover my education, skills, experiences, and projects',
         contactCard: 'Contact',
         contactDesc: 'Get in touch for job opportunities',
-        
+
         // Profile Page
         profileTitle: 'Profile',
         name: 'Name',
@@ -25,17 +26,17 @@ const translations = {
         residence: 'Residence location',
         sports: 'Sports',
         sportsText: 'Archery (7 years), Table Tennis (1 year), Tennis (4 years), Climbing (2 years)',
-        
+
         educationTitle: 'Educational Background',
         college: 'College',
         highSchool: 'High school',
         specialization: 'Specialization',
         higherEd: 'Higher studies',
-        
+
         skillsTitle: 'Skills',
         codingLang: 'Coding Language',
         spokenLang: 'Spoken Language',
-        
+
         experiencesTitle: 'Experiences',
         exp1Title: 'IT Technician',
         exp1Type: 'Type: Fixed term contract',
@@ -44,7 +45,7 @@ const translations = {
         exp2Title: 'Construction Technical Inspector Assistant',
         exp2Type: 'Type: Internship',
         exp2Tasks: 'Main tasks: Assisting in controlling respectability of standards on construction sites',
-        
+
         projectsTitle: 'Personal Projects',
         proj1Title: 'SQL Database for high school',
         proj1Desc: 'Database collecting all statistics (~36k elements) from the French Parcoursup platform and sorting them according to different criterias on a dedicated website.',
@@ -60,12 +61,12 @@ const translations = {
         proj5Title: 'Hack & Juice (JuiceShop hacking competition)',
         proj5Desc: 'Participation to Epitech\'s Hack & Juice event.',
         proj5Tech: 'I finished 1st on my campus and 15th overall.',
-        
+
         certificationsTitle: 'Certifications',
         cert1: 'CEFR: English (B1+)',
         cert2: 'ANSSI SecNum Academy',
         cert3: 'PIX',
-        
+
         // Contact Page
         contactTitle: 'Job Opportunity Form',
         contactSubtitle: 'Please fill out this form to propose a job opportunity',
@@ -82,7 +83,7 @@ const translations = {
         additionalMessage: 'Additional Message',
         submit: 'Send Opportunity',
         required: 'Required',
-        
+
         // Footer
         email: 'Email',
         address: 'Address',
@@ -93,17 +94,18 @@ const translations = {
     fr: {
         // Navigation
         home: 'Accueil',
-        mainprofile: 'PROFIL',
+        mainprofile: '[PROFIL]',
         profile: 'Profil',
+        maincontact: '[CONTACT]',
         contact: 'Contact',
-        
+
         // Home Page
         welcome: 'Bienvenue sur Mon Portfolio',
         profileCard: 'Profil du Candidat',
         profileDesc: 'Découvrez ma formation, mes compétences, mes expériences et mes projets',
         contactCard: 'Contact',
         contactDesc: 'Contactez-moi pour des opportunités professionnelles',
-        
+
         // Profile Page
         profileTitle: 'Profil',
         name: 'Nom & Prénoms',
@@ -115,17 +117,17 @@ const translations = {
         residence: 'Lieu de résidence',
         sports: 'Sports',
         sportsText: 'Tir à l\'arc (7 ans), Tennis de Table (1 an), Tennis (4 ans), Escalade (2 ans)',
-        
+
         educationTitle: 'Parcours Éducatif',
         college: 'Collège',
         highSchool: 'Lycée',
         specialization: 'Spécialité',
         higherEd: 'Études supérieures',
-        
+
         skillsTitle: 'Compétences',
         codingLang: 'Langages codés',
         spokenLang: 'Langages parlés',
-        
+
         experiencesTitle: 'Expériences',
         exp1Title: 'Technicien Informatique',
         exp1Type: 'Type: CDD',
@@ -134,7 +136,7 @@ const translations = {
         exp2Title: 'Assistant Contrôleur Technique en BTP',
         exp2Type: 'Type: Stage',
         exp2Tasks: 'Tâches principales: Contrôle de la respectabilité des normes sur les chantiers',
-        
+
         projectsTitle: 'Projets Personnels',
         proj1Title: 'Base de données SQL pour mon lycée',
         proj1Desc: 'Base de données collectant des statistiques (~36k éléments) de la plateforme française Parcoursup et triant ces données en fonction de différents critères sur un site dédié.',
@@ -155,7 +157,7 @@ const translations = {
         cert1: 'CEFR: Anglais (B1+)',
         cert2: 'ANSSI SecNum Academy',
         cert3: 'PIX',
-        
+
         // Contact Page
         contactTitle: 'Formulaire d\'Opportunité Professionnelle',
         contactSubtitle: 'Veuillez remplir ce formulaire pour proposer une opportunité professionnelle',
@@ -172,7 +174,7 @@ const translations = {
         additionalMessage: 'Message Additionnel',
         submit: 'Envoyer l\'Opportunité',
         required: 'Requis',
-        
+
         // Footer
         contactmePrefix: 'Utilisez le formulaire de',
         contactmeSuffix: 'pour me contacter.',
