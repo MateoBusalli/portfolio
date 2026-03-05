@@ -53,6 +53,9 @@ const translations = {
         proj2Tech: 'A full cli interface is included.',
         proj3Title: 'Functional Website',
         proj3Desc: 'Website using JS, HTML and CSS for a fake travel agency with multiple pages.',
+        proj4Title: 'Hackathon ActInSpace',
+        proj4Desc: 'Participation to the ActInSpace hackathon 2026 edition.',
+        proj4Tech: 'We finished at the 4th position.',
         
         certificationsTitle: 'Certifications',
         cert1: 'CEFR: English (B1+)',
@@ -136,6 +139,9 @@ const translations = {
         proj2Tech: 'Une interface cli complète est incluse.',
         proj3Title: 'Site web fonctionnel',
         proj3Desc: 'Site web utilisant du JS, HTML et du CSS pour une fausse agence de voyage, comprend plusieurs pages.',
+        proj4Title: 'Hackathon ActInSpace',
+        proj4Desc: 'Participation à l\'édition 2026 du hackathon ActInSpace.',
+        proj4Tech: 'Nous avons terminé à la 4ème position.',
         
         certificationsTitle: 'Certifications',
         cert1: 'CEFR: Anglais (B1+)',
