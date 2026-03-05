@@ -56,6 +56,9 @@ const translations = {
         proj4Title: 'Hackathon ActInSpace',
         proj4Desc: 'Participation to the ActInSpace hackathon 2026 edition.',
         proj4Tech: 'We finished at the 4th position.',
+        proj5Title: 'Hack & Juice (JuiceShop hacking competition)',
+        proj5Desc: 'Participation to Epitech\'s Hack & Juice event.',
+        proj5Tech: 'I finished 1st on my campus and 15th overall.',
         
         certificationsTitle: 'Certifications',
         cert1: 'CEFR: English (B1+)',
@@ -142,7 +145,10 @@ const translations = {
         proj4Title: 'Hackathon ActInSpace',
         proj4Desc: 'Participation à l\'édition 2026 du hackathon ActInSpace.',
         proj4Tech: 'Nous avons terminé à la 4ème position.',
-        
+        proj5Title: 'Hack & Juice (Compétition de hacking  JuiceShop)',
+        proj5Desc: 'Participation à l\'événement Hack & Juice d\'Epitech.',
+        proj5Tech: 'J\'ai terminé à la 1ère position de mon campus et 15ème au global.',
+
         certificationsTitle: 'Certifications',
         cert1: 'CEFR: Anglais (B1+)',
         cert2: 'ANSSI SecNum Academy',
