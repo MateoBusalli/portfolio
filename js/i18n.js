@@ -4,7 +4,7 @@ const translations = {
         // Navigation
         home: 'Home',
         profile: 'Profile',
-        mainprofile: '[PROFILE]',
+        mainprofile: 'PROFILE',
         contact: 'Contact',
         
         // Home Page
@@ -93,7 +93,7 @@ const translations = {
     fr: {
         // Navigation
         home: 'Accueil',
-        mainprofile: '[PROFIL]',
+        mainprofile: 'PROFIL',
         profile: 'Profil',
         contact: 'Contact',
         
