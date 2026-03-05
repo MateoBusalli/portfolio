@@ -11,9 +11,23 @@ const translations = {
         // Home Page
         welcome: 'Welcome to My Portfolio',
         profileCard: 'Candidate Profile',
+        discoverMy: 'Discover my',
         profileDesc: 'Discover my education, skills, experiences, and projects',
         contactCard: 'Contact',
         contactDesc: 'Get in touch for job opportunities',
+
+        // Home - About Section
+        aboutLabel: '// About Me',
+        aboutText: 'Cybersecurity student at EPITECH Nice, passionate about offensive security, network analysis, and building tools that make systems safer. Currently pursuing a BAC+5 Master of Science with a specialization in cybersecurity. Always looking for new challenges and opportunities to grow.',
+
+        // Home - Stats
+        statProjects: 'Projects',
+        statCerts: 'Certifications',
+        statLanguages: 'Languages',
+        statExperiences: 'Experiences',
+
+        // Home - Tech Stack
+        techLabel: '// Tech Stack',
 
         // Profile Page
         profileTitle: 'Profile',
@@ -70,26 +84,17 @@ const translations = {
         // Contact Page
         contactTitle: 'Job Opportunity Form',
         contactSubtitle: 'Please fill out this form to propose a job opportunity',
-        recruiterName: 'Recruiter Name',
         recruiterEmail: 'Recruiter Email',
         companyName: 'Company Name',
-        jobTitle: 'Job Title',
-        jobDescription: 'Job Description',
-        mainTasks: 'Main Tasks',
-        startDate: 'Start Date',
-        endDate: 'End Date',
-        salaryRange: 'Salary Range',
-        location: 'Location',
-        additionalMessage: 'Additional Message',
+        message: 'Message',
         submit: 'Send Opportunity',
         required: 'Required',
 
         // Footer
-        email: 'Email',
-        address: 'Address',
-        footerText: '06130 Grasse, France',
-        contactmePrefix: 'Use',
-        contactmeSuffix: 'form to contact me'
+        footerStatus: 'STATUS',
+        footerStatusVal: 'OPEN TO WORK',
+        footerLocation: 'LOCATION',
+        footerYear: 'YEAR'
     },
     fr: {
         // Navigation
@@ -102,9 +107,23 @@ const translations = {
         // Home Page
         welcome: 'Bienvenue sur Mon Portfolio',
         profileCard: 'Profil du Candidat',
+        discoverMy: 'Découvrez mes',
         profileDesc: 'Découvrez ma formation, mes compétences, mes expériences et mes projets',
         contactCard: 'Contact',
         contactDesc: 'Contactez-moi pour des opportunités professionnelles',
+
+        // Home - About Section
+        aboutLabel: '// À Propos',
+        aboutText: 'Étudiant en cybersécurité à EPITECH Nice, passionné par la sécurité offensive, l\'analyse réseau et le développement d\'outils qui rendent les systèmes plus sûrs. Actuellement en cursus BAC+5 Master of Science avec spécialisation en cybersécurité. Toujours à la recherche de nouveaux défis et opportunités de développement.',
+
+        // Home - Stats
+        statProjects: 'Projets',
+        statCerts: 'Certifications',
+        statLanguages: 'Langages',
+        statExperiences: 'Expériences',
+
+        // Home - Tech Stack
+        techLabel: '// Stack Technique',
 
         // Profile Page
         profileTitle: 'Profil',
@@ -161,23 +180,17 @@ const translations = {
         // Contact Page
         contactTitle: 'Formulaire d\'Opportunité Professionnelle',
         contactSubtitle: 'Veuillez remplir ce formulaire pour proposer une opportunité professionnelle',
-        recruiterName: 'Nom du Recruteur',
         recruiterEmail: 'Email du Recruteur',
         companyName: 'Nom de l\'Entreprise',
-        jobTitle: 'Titre du Poste',
-        jobDescription: 'Description du Poste',
-        mainTasks: 'Tâches Principales',
-        startDate: 'Date de Début',
-        endDate: 'Date de Fin',
-        salaryRange: 'Fourchette de Salaire',
-        location: 'Localisation',
-        additionalMessage: 'Message Additionnel',
+        message: 'Message',
         submit: 'Envoyer l\'Opportunité',
         required: 'Requis',
 
         // Footer
-        contactmePrefix: 'Utilisez le formulaire de',
-        contactmeSuffix: 'pour me contacter.',
+        footerStatus: 'STATUT',
+        footerStatusVal: 'OUVERT AUX OFFRES',
+        footerLocation: 'LOCALISATION',
+        footerYear: 'ANNÉE',
     }
 };
 

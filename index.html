@@ -26,37 +26,93 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <canvas id="matrix-canvas"></canvas>
         <h1 id="typewriter-text"></h1>
         <p data-i18n="welcome">Welcome to My Portfolio</p>
     </section>
+
+    <!-- Quick Stats Bar -->
+    <div class="stats-bar">
+        <div class="stat-item">
+            <span class="stat-number" data-count="5">0</span>
+            <span class="stat-label" data-i18n="statProjects">Projects</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" data-count="3">0</span>
+            <span class="stat-label" data-i18n="statCerts">Certifications</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" data-count="5">0</span>
+            <span class="stat-label" data-i18n="statLanguages">Languages</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" data-count="2">0</span>
+            <span class="stat-label" data-i18n="statExperiences">Experiences</span>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <div class="about-section">
+        <span class="section-label" data-i18n="aboutLabel">// About Me</span>
+        <p data-i18n="aboutText">Cybersecurity student at EPITECH Nice, passionate about offensive security, network analysis, and building tools that make systems safer. Currently pursuing a BAC+5 Master of Science with a specialization in cybersecurity. Always looking for new challenges and opportunities to grow.</p>
+    </div>
 
     <!-- Main Content -->
     <main class="container" style="flex: 1;">
         <div class="grid grid-2">
             <!-- Profile Card -->
-            <a href="candidate.html" class="card-link">
+            <a href="candidate.html" class="card-link card-profile">
                 <div class="card card-clickable fade-in">
                     <span class="card-icon" data-i18n="mainprofile">[PROFILE]</span>
                     <h2 class="card-title" data-i18n="profileCard">Candidate Profile</h2>
-                    <p class="card-text" data-i18n="profileDesc">Discover my education, skills, experiences, and projects</p>
+                    <p class="card-text carousel-text">
+                        <span data-i18n="discoverMy">Discover my</span>
+                        <span class="carousel-wrapper">
+                            <span id="carousel-word" class="carousel-word"></span>
+                            <span class="carousel-cursor">_</span>
+                        </span>
+                    </p>
                 </div>
             </a>
 
             <!-- Contact Card -->
-            <a href="contact.html" class="card-link">
+            <a href="contact.html" class="card-link card-contact">
                 <div class="card card-clickable fade-in">
-                    <span class="card-icon" data-i18n="contact">[CONTACT]</span>
+                    <span class="card-icon" data-i18n="maincontact">[CONTACT]</span>
                     <h2 class="card-title" data-i18n="contactCard">Contact</h2>
                     <p class="card-text" data-i18n="contactDesc">Get in touch for job opportunities</p>
                 </div>
             </a>
+        </div>
+
+        <!-- Tech Stack Section -->
+        <div class="tech-section">
+            <span class="section-label" data-i18n="techLabel">// Tech Stack</span>
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Linux</span>
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">Bash</span>
+                <span class="tech-tag">Networking</span>
+                <span class="tech-tag">Cybersecurity</span>
+            </div>
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p><span data-i18n="contactmePrefix">Use</span> <a href="contact.html" data-i18n="contact">contact</a> <span data-i18n="contactmeSuffix">form to contact me.</span></p>
+            <span class="footer-prompt">mateo@portfolio:~$&nbsp;</span>
+            <span class="footer-item"><span class="footer-key" data-i18n="footerStatus">STATUS</span>: <span class="footer-val" data-i18n="footerStatusVal">OPEN TO WORK</span></span>
+            <span class="footer-sep">//</span>
+            <span class="footer-item"><span class="footer-key" data-i18n="footerLocation">LOCATION</span>: <span class="footer-val">NICE, FRANCE</span></span>
+            <span class="footer-sep">//</span>
+            <span class="footer-item"><span class="footer-key" data-i18n="footerYear">YEAR</span>: <span class="footer-val">2026</span></span>
+            <span class="footer-cursor">_</span>
         </div>
     </footer>
 
@@ -81,10 +137,133 @@
             }
         }
 
+        // Carousel for profile card
+        const carouselWords = {
+            en: ['Education', 'Skills', 'Experiences', 'Projects', 'Certifications'],
+            fr: ['Formations', 'Compétences', 'Expériences', 'Projets', 'Certifications']
+        };
+
+        function startCarousel() {
+            const wordEl = document.getElementById('carousel-word');
+            if (!wordEl) return;
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            const typingSpeed = 100;
+            const deletingSpeed = 60;
+            const pauseTime = 1800;
+
+            function getWords() {
+                const lang = (typeof i18n !== 'undefined') ? i18n.getCurrentLang() : 'en';
+                return carouselWords[lang] || carouselWords.en;
+            }
+
+            function tick() {
+                const words = getWords();
+                const currentWord = words[wordIndex % words.length];
+
+                if (!isDeleting) {
+                    wordEl.textContent = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                    if (charIndex === currentWord.length) {
+                        isDeleting = true;
+                        setTimeout(tick, pauseTime);
+                        return;
+                    }
+                    setTimeout(tick, typingSpeed);
+                } else {
+                    wordEl.textContent = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        wordIndex = (wordIndex + 1) % words.length;
+                    }
+                    setTimeout(tick, deletingSpeed);
+                }
+            }
+
+            tick();
+        }
+
         // Start typing after page load
         window.addEventListener('load', () => {
             setTimeout(typeWriter, 500);
+            setTimeout(startCarousel, 800);
+            initMatrix();
+            animateStats();
+            animateTechTags();
         });
+
+        // Matrix rain effect
+        function initMatrix() {
+            const canvas = document.getElementById('matrix-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            function resize() {
+                canvas.width = canvas.parentElement.offsetWidth;
+                canvas.height = canvas.parentElement.offsetHeight;
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*(){}[]|;:<>?/~';
+            const fontSize = 14;
+            const columns = Math.floor(canvas.width / fontSize);
+            const drops = Array(columns).fill(1);
+
+            function draw() {
+                ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#ff0000';
+                ctx.font = fontSize + 'px monospace';
+
+                for (let i = 0; i < drops.length; i++) {
+                    const text = chars.charAt(Math.floor(Math.random() * chars.length));
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+            setInterval(draw, 80);
+        }
+
+        // Stat counter animation
+        function animateStats() {
+            const statNumbers = document.querySelectorAll('.stat-number[data-count]');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const target = parseInt(el.getAttribute('data-count'));
+                        let current = 0;
+                        const increment = Math.ceil(target / 30);
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(timer);
+                            }
+                            el.textContent = current;
+                        }, 50);
+                        observer.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.5 });
+            statNumbers.forEach(el => observer.observe(el));
+        }
+
+        // Tech tag stagger animation
+        function animateTechTags() {
+            const tags = document.querySelectorAll('.tech-tag');
+            tags.forEach((tag, i) => {
+                setTimeout(() => {
+                    tag.classList.add('animate');
+                }, i * 150);
+            });
+        }
     </script>
     <script src="./js/i18n.js"></script>
 </body>
