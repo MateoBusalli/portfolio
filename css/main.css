@@ -529,6 +529,9 @@ body {
     padding: 1rem 2rem;
     margin-top: 4rem;
     border-top: 2px solid var(--primary);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 .footer-content {
