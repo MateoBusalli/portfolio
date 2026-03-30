@@ -92,7 +92,7 @@ const translations = {
 
         // Footer
         footerStatus: 'STATUS',
-        footerStatusVal: 'OPEN TO WORK',
+        footerStatusVal: 'IN INTERNSHIP',
         footerLocation: 'LOCATION',
         footerYear: 'YEAR'
     },
@@ -188,7 +188,7 @@ const translations = {
 
         // Footer
         footerStatus: 'STATUT',
-        footerStatusVal: 'OUVERT AUX OFFRES',
+        footerStatusVal: 'EN STAGE',
         footerLocation: 'LOCALISATION',
         footerYear: 'ANNÉE',
     }
