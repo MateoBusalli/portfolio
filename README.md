@@ -11,8 +11,6 @@ This portfolio serves as a comprehensive overview of my professional background.
 - CSS3
 - JavaScript
 - Formspree (for contact form functionality)
-- AntDesign 
-- React.js
 
 ### Features
 - Responsive design for optimal viewing on various devices
