@@ -363,6 +363,7 @@ body {
     background: var(--bg-card);
     border: 1px solid var(--border);
     margin-bottom: 1rem;
+    width: 100%;
     overflow: hidden;
 }
 
