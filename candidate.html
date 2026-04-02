@@ -9,6 +9,7 @@
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+<script>if(localStorage.getItem('theme')==='light')document.body.classList.add('light-mode');</script>
     <!-- Header -->
     <header class="header">
         <div class="header-content">
@@ -20,6 +21,7 @@
                 <a href="candidate.html" data-i18n="profile">Profile</a>
                 <a href="contact.html" data-i18n="contact">Contact</a>
                 <button id="lang-toggle" class="lang-toggle" onclick="i18n.toggleLanguage()">FR</button>
+                <button id="theme-toggle" class="lang-toggle" onclick="theme.toggle()">[LIGHT]</button>
             </nav>
         </div>
     </header>
@@ -158,10 +160,28 @@
         <section class="section" style="margin-top: 3rem;">
             <div class="card">
                 <h3 class="section-title" data-i18n="projectsTitle">Personal Projects</h3>
-                
-                <div class="collapsible">
+
+                <!-- Project Filter Bar -->
+                <div class="project-filter-bar">
+                    <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All</button>
+                    <button class="filter-btn" data-filter="Python">Python</button>
+                    <button class="filter-btn" data-filter="Web">Web</button>
+                    <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+                    <button class="filter-btn" data-filter="Security">Security</button>
+                    <button class="filter-btn" data-filter="Data">Data</button>
+                    <button class="filter-btn" data-filter="Hackathon">Hackathon</button>
+                </div>
+
+                <div class="collapsible project-collapsible" data-tags="Python SQL Data">
                     <div class="collapsible-header">
-                        <span data-i18n="proj1Title">SQL Database for high school</span>
+                        <div class="collapsible-header-left">
+                            <span data-i18n="proj1Title">SQL Database for high school</span>
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">SQL</span>
+                                <span class="project-tag">Data</span>
+                            </div>
+                        </div>
                         <span class="collapsible-icon">▼</span>
                     </div>
                     <div class="collapsible-content">
@@ -172,9 +192,15 @@
                     </div>
                 </div>
 
-                <div class="collapsible">
+                <div class="collapsible project-collapsible" data-tags="Python Security">
                     <div class="collapsible-header">
-                        <span data-i18n="proj2Title">Bruteforce tool</span>
+                        <div class="collapsible-header-left">
+                            <span data-i18n="proj2Title">Bruteforce tool</span>
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Security</span>
+                            </div>
+                        </div>
                         <span class="collapsible-icon">▼</span>
                     </div>
                     <div class="collapsible-content">
@@ -185,9 +211,15 @@
                     </div>
                 </div>
 
-                <div class="collapsible">
+                <div class="collapsible project-collapsible" data-tags="Web JavaScript">
                     <div class="collapsible-header">
-                        <span data-i18n="proj3Title">Functional Website</span>
+                        <div class="collapsible-header-left">
+                            <span data-i18n="proj3Title">Functional Website</span>
+                            <div class="project-tags">
+                                <span class="project-tag">Web</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                        </div>
                         <span class="collapsible-icon">▼</span>
                     </div>
                     <div class="collapsible-content">
@@ -197,9 +229,14 @@
                     </div>
                 </div>
 
-                <div class="collapsible">
+                <div class="collapsible project-collapsible" data-tags="Hackathon">
                     <div class="collapsible-header">
-                        <span data-i18n="proj4Title">ActInSpace hackathon</span>
+                        <div class="collapsible-header-left">
+                            <span data-i18n="proj4Title">ActInSpace hackathon</span>
+                            <div class="project-tags">
+                                <span class="project-tag">Hackathon</span>
+                            </div>
+                        </div>
                         <span class="collapsible-icon">▼</span>
                     </div>
                     <div class="collapsible-content">
@@ -210,9 +247,15 @@
                     </div>
                 </div>
 
-                <div class="collapsible">
+                <div class="collapsible project-collapsible" data-tags="Security Hackathon">
                     <div class="collapsible-header">
-                        <span data-i18n="proj5Title">Hack & Juice (JuiceShop hacking competition)</span>
+                        <div class="collapsible-header-left">
+                            <span data-i18n="proj5Title">Hack & Juice (JuiceShop hacking competition)</span>
+                            <div class="project-tags">
+                                <span class="project-tag">Security</span>
+                                <span class="project-tag">Hackathon</span>
+                            </div>
+                        </div>
                         <span class="collapsible-icon">▼</span>
                     </div>
                     <div class="collapsible-content">
@@ -224,9 +267,15 @@
                     </div>
                 </div>
 
-                <div class="collapsible">
+                <div class="collapsible project-collapsible" data-tags="Web JavaScript">
                     <div class="collapsible-header">
-                        <span data-i18n="proj6Title">Todo List app</span>
+                        <div class="collapsible-header-left">
+                            <span data-i18n="proj6Title">Todo List app</span>
+                            <div class="project-tags">
+                                <span class="project-tag">Web</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                        </div>
                         <span class="collapsible-icon">▼</span>
                     </div>
                     <div class="collapsible-content">
@@ -238,9 +287,15 @@
                     </div>
                 </div>
 
-                <div class="collapsible">
+                <div class="collapsible project-collapsible" data-tags="Python Data">
                     <div class="collapsible-header">
-                        <span data-i18n="proj7Title">Railway analysis and prediction tool</span>
+                        <div class="collapsible-header-left">
+                            <span data-i18n="proj7Title">Railway analysis and prediction tool</span>
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Data</span>
+                            </div>
+                        </div>
                         <span class="collapsible-icon">▼</span>
                     </div>
                     <div class="collapsible-content">
@@ -252,6 +307,7 @@
                     </div>
                 </div>
 
+                <p class="no-projects-msg" data-i18n="noProjectsMsg" style="display:none;">No projects match this filter.</p>
             </div>
         </section>
 
@@ -287,12 +343,35 @@
     </footer>
 
     <script src="./js/i18n.js"></script>
+    <script src="./js/chat.js"></script>
     <script>
         // Initialize collapsibles
         document.querySelectorAll('.collapsible-header').forEach(header => {
             header.addEventListener('click', () => {
                 const collapsible = header.parentElement;
                 collapsible.classList.toggle('active');
+            });
+        });
+
+        // Project filter logic
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+                const projects = document.querySelectorAll('.project-collapsible');
+                let visible = 0;
+
+                projects.forEach(proj => {
+                    const tags = proj.dataset.tags ? proj.dataset.tags.split(' ') : [];
+                    const match = filter === 'all' || tags.includes(filter);
+                    proj.style.display = match ? '' : 'none';
+                    if (match) visible++;
+                });
+
+                const noMsg = document.querySelector('.no-projects-msg');
+                if (noMsg) noMsg.style.display = visible === 0 ? 'block' : 'none';
             });
         });
 

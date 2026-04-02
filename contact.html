@@ -9,6 +9,7 @@
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+<script>if(localStorage.getItem('theme')==='light')document.body.classList.add('light-mode');</script>
     <!-- Header -->
     <header class="header">
         <div class="header-content">
@@ -20,6 +21,7 @@
                 <a href="candidate.html" data-i18n="profile">Profile</a>
                 <a href="contact.html" data-i18n="contact">Contact</a>
                 <button id="lang-toggle" class="lang-toggle" onclick="i18n.toggleLanguage()">FR</button>
+                <button id="theme-toggle" class="lang-toggle" onclick="theme.toggle()">[LIGHT]</button>
             </nav>
         </div>
     </header>
@@ -75,5 +77,6 @@
     </footer>
 
     <script src="./js/i18n.js"></script>
+    <script src="./js/chat.js"></script>
 </body>
 </html>

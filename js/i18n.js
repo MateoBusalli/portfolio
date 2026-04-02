@@ -83,6 +83,9 @@ const translations = {
         proj7Desc: 'Tool for analyzing train delays and predicting future delays using historical data.',
         proj7Tech: 'Features include data visualization, statistical analysis, and machine learning-based predictions.',
 
+        filterAll: 'All',
+        noProjectsMsg: 'No projects match this filter.',
+
         certificationsTitle: 'Certifications',
         cert1: 'CEFR: English (B1+)',
         cert2: 'ANSSI SecNum Academy',
@@ -186,6 +189,9 @@ const translations = {
         proj7Desc: 'Outil d\'analyse des retards de trains et de prédiction des retards futurs en utilisant des données historiques.',
         proj7Tech: 'Les fonctionnalités incluent la visualisation des données, l\'analyse statistique et les prédictions basées sur l\'apprentissage automatique.',
 
+        filterAll: 'Tous',
+        noProjectsMsg: 'Aucun projet ne correspond à ce filtre.',
+
         certificationsTitle: 'Certifications',
         cert1: 'CEFR: Anglais (B1+)',
         cert2: 'ANSSI SecNum Academy',
@@ -259,7 +265,35 @@ class I18n {
 // Initialize i18n
 const i18n = new I18n();
 
+// Theme Manager
+class Theme {
+    constructor() {
+        this.current = localStorage.getItem('theme') || 'dark';
+    }
+
+    apply() {
+        if (this.current === 'light') {
+            document.body.classList.add('light-mode');
+        } else {
+            document.body.classList.remove('light-mode');
+        }
+        const btn = document.getElementById('theme-toggle');
+        if (btn) {
+            btn.textContent = this.current === 'dark' ? '[LIGHT]' : '[DARK]';
+        }
+    }
+
+    toggle() {
+        this.current = this.current === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', this.current);
+        this.apply();
+    }
+}
+
+const theme = new Theme();
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
     i18n.updatePage();
+    theme.apply();
 });
