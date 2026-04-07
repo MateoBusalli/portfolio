@@ -32,7 +32,7 @@
         <!-- Profile Section -->
         <section class="section">
             <div class="profile-header">
-                <h2 class="section-title" data-i18n="profileTitle">Profile</h2>
+                <h2 class="section-title"><span id="profile-typewriter"></span></h2>
                 <div class="profile-content">
                     <div class="profile-info">
                         <div class="info-item">
@@ -346,6 +346,53 @@
     <script src="./js/i18n.js"></script>
     <script src="./js/chat.js"></script>
     <script>
+        // ── Profile Typewriter ──────────────────────────
+        (function() {
+            function startTypewriter() {
+                const el = document.getElementById('profile-typewriter');
+                if (!el) return;
+                const lang = (typeof i18n !== 'undefined') ? i18n.getCurrentLang() : 'en';
+                const text = lang === 'fr' ? 'PROFIL' : 'PROFILE';
+                let idx = 0;
+                el.textContent = '';
+                function type() {
+                    if (idx < text.length) {
+                        el.textContent += text.charAt(idx);
+                        idx++;
+                        setTimeout(type, 150);
+                    } else {
+                        const cursor = document.createElement('span');
+                        cursor.className = 'cursor';
+                        cursor.innerHTML = '&nbsp;';
+                        el.appendChild(cursor);
+                    }
+                }
+                setTimeout(type, 300);
+            }
+
+            window.startTypewriter = startTypewriter;
+
+            document.addEventListener('DOMContentLoaded', startTypewriter);
+        })();
+
+        // ── Scroll Fade-in for Cards ────────────────────
+        (function() {
+            document.addEventListener('DOMContentLoaded', () => {
+                const cards = document.querySelectorAll('.card');
+                cards.forEach(card => card.classList.add('card-animated'));
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('card-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.08 });
+
+                cards.forEach(card => observer.observe(card));
+            });
+        })();
         // Initialize collapsibles
         document.querySelectorAll('.collapsible-header').forEach(header => {
             header.addEventListener('click', () => {
@@ -376,7 +423,7 @@
             });
         });
 
-        // Update language-specific content
+        // Update language-specific content + re-trigger typewriter
         document.addEventListener('DOMContentLoaded', () => {
             function updateLanguageContent() {
                 const lang = i18n.getCurrentLang();
@@ -390,6 +437,10 @@
             i18n.toggleLanguage = function() {
                 originalToggle.call(this);
                 updateLanguageContent();
+                // Re-type title in new language
+                const el = document.getElementById('profile-typewriter');
+                if (el) el.textContent = '';
+                startTypewriter();
             };
         });
     </script>

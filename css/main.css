@@ -748,6 +748,27 @@ body {
     animation: fadeIn 0.6s ease-out;
 }
 
+/* Typewriter cursor for section titles */
+.section-title .cursor {
+    display: inline-block;
+    width: 2px;
+    background-color: var(--primary);
+    margin-left: 6px;
+    vertical-align: middle;
+    animation: blink 0.75s step-end infinite;
+}
+
+/* Scroll fade-in for cards */
+.card-animated {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.card-animated.card-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Links */
 a {
     color: var(--primary);

@@ -275,6 +275,7 @@
     border-right: 2px solid var(--primary);
     animation: typingCmd 2s steps(30) forwards, blinkCaret 0.75s step-end infinite;
     display: inline-block;
+    vertical-align: middle;
     max-width: 0;
 }
 
