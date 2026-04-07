@@ -273,6 +273,16 @@ body {
 }
 
 /* main menu cards */
+.main-menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.main-card-full {
+    grid-column: 1 / -1;
+}
+
 .card-profile,
 .card-contact {
     width: 100%;
@@ -282,6 +292,12 @@ body {
 .card-contact .card {
     min-height: auto;
     align-items: left;
+}
+
+@media (max-width: 768px) {
+    .main-menu-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Section */
