@@ -1,5 +1,3 @@
-// DFIR Lab — Immersive Investigation JS
-
 (function () {
     'use strict';
 
@@ -11,7 +9,7 @@
         { text: '[OK] crypto_engine', cls: 'boot-ok' },
         { text: '[OK] forensic_toolkit', cls: 'boot-ok' },
         { text: '[OK] network_analyzer', cls: 'boot-ok' },
-        { text: '[WARN] osint_framework — academic mode only', cls: 'boot-warn' },
+        { text: '[WARN] osint_framework  academic mode only', cls: 'boot-warn' },
         { text: 'Mounting encrypted volumes... OK', cls: 'boot-ok' },
         { text: 'Connecting to intelligence database...', cls: '' },
         { text: '[OK] Case files loaded: 1', cls: 'boot-ok' },
@@ -19,15 +17,17 @@
         { text: '[OK] CLEARANCE: ACADEMIC RESEARCH', cls: 'boot-ok' },
         { text: '[OK] LEGAL FRAMEWORK: ACTIVE', cls: 'boot-ok' },
         { text: '═══════════════════════════════════════', cls: '' },
-        { text: 'WORKSTATION READY — Welcome, Investigator.', cls: 'boot-ok' },
+        { text: 'WORKSTATION READY  Welcome, Investigator.', cls: 'boot-ok' },
     ];
 
     function runBootSequence() {
         const overlay = document.getElementById('boot-overlay');
         const container = document.getElementById('boot-lines');
-        if (!overlay || !container) return;
+        if (!overlay || !container) {
+            initPage();
+            return;
+        }
 
-        // Skip if already visited this session
         if (sessionStorage.getItem('dfir-booted')) {
             overlay.classList.add('hidden');
             initPage();
@@ -129,7 +129,6 @@
         function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // Draw grid
             ctx.strokeStyle = 'rgba(255, 0, 0, 0.06)';
             ctx.lineWidth = 1;
             const gridSize = 40;
@@ -147,7 +146,6 @@
                 ctx.stroke();
             }
 
-            // Draw particles and connections
             for (let i = 0; i < particles.length; i++) {
                 const p = particles[i];
                 p.x += p.vx;
@@ -161,7 +159,6 @@
                 ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
                 ctx.fill();
 
-                // Connect nearby particles
                 for (let j = i + 1; j < particles.length; j++) {
                     const p2 = particles[j];
                     const dx = p.x - p2.x;

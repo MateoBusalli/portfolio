@@ -897,9 +897,7 @@ a:hover {
     }
 }
 
-/* ============================
-   Chat Widget
-   ============================ */
+/* chat widget */
 #chat-widget {
     position: fixed;
     bottom: 4.5rem;
@@ -983,7 +981,7 @@ body.light-mode #chat-popup {
     to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* Title bar — macOS-inspired dots */
+/* Title bar  macOS-inspired dots */
 #chat-header {
     background: #161616;
     border-bottom: 1px solid #2a2a2a;
@@ -1150,9 +1148,6 @@ body.light-mode #chat-input-line {
     }
 }
 
-/* ============================
-   Scanline / Matrix Background
-   ============================ */
 .hero {
     position: relative;
     overflow: hidden;
@@ -1217,9 +1212,7 @@ body.light-mode #chat-input-line {
     z-index: 0;
 }
 
-/* ============================
-   About Me Section
-   ============================ */
+/* about me section */
 .about-section {
     text-align: center;
     padding: 3rem 2rem;
@@ -1245,9 +1238,7 @@ body.light-mode #chat-input-line {
     text-align: left;
 }
 
-/* ============================
-   Quick Stats Bar
-   ============================ */
+/* quick stats bar */
 .stats-bar {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -1290,9 +1281,7 @@ body.light-mode #chat-input-line {
     letter-spacing: 2px;
 }
 
-/* ============================
-   Tech Stack Tags
-   ============================ */
+/* tech stack tags */
 .tech-section {
     padding: 2rem;
     max-width: 1200px;

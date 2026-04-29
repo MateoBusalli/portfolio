@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matéo Busalli - DFIR Case: CASE TITLE">
+    <title>Case: CASE TITLE</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/investigations.css">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<script>if(localStorage.getItem('theme')==='light')document.body.classList.add('light-mode');</script>
+
+    <div class="scanline-overlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">
+                <span>Intelligence Notice</span>
+            </a>
+            <nav class="nav">
+                <a href="../index.html" data-i18n="home">Home</a>
+                <a href="../candidate.html" data-i18n="profile">Profile</a>
+                <a href="../investigations.html" data-i18n="investigations" class="nav-active">Investigations</a>
+                <a href="../contact.html" data-i18n="contact">Contact</a>
+                <button id="lang-toggle" class="lang-toggle" onclick="i18n.toggleLanguage()">FR</button>
+                <button id="theme-toggle" class="lang-toggle" onclick="theme.toggle()">[LIGHT]</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="case-breadcrumb">
+        <a href="../investigations.html" class="breadcrumb-back">← <span data-i18n="investigations">Investigations</span></a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">mmm-yyyy-case-name/</span>
+    </div>
+
+    <!-- Case Hero -->
+    <section class="case-page-hero">
+        <div class="case-page-hero-content">
+            <div class="dfir-badge">[CASE FILE]</div>
+            <h1 class="dfir-title" style="color:#ffffff;">CASE TITLE</h1>
+            <div class="dfir-status-bar">
+                <span class="status-dot active"></span>
+                <span>YYYY-MM-DD HH:MM UTC+X</span>
+                <span class="status-sep">|</span>
+                <span class="folder-status status-closed">ANALYSIS COMPLETE</span>
+                <span class="status-sep">|</span>
+                <span>ACADEMIC RESEARCH</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Disclaimer  do not remove -->
+    <div class="legal-banner">
+        <span class="legal-icon">[!]</span>
+        <p>All investigations are conducted within the strict legal framework of French law and ethical OSINT practices. No unauthorized access or exploitation techniques are used. This work is performed for academic research and defensive security purposes only.</p>
+    </div>
+
+    <section class="container case-page-content">
+
+        <!-- ── 1. Case Summary Terminal ──────────────────────── -->
+        <div class="case-terminal">
+            <div class="terminal-bar">
+                <div class="terminal-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="terminal-title">case-summary.sh</span>
+            </div>
+            <div class="terminal-body">
+                <div class="term-line">
+                    <span class="term-prompt">$</span>
+                    <span class="term-cmd">./analyze --case case-slug</span>
+                </div>
+                <div class="term-output">
+                    <div class="term-line delay-1"><span class="term-info">[INFO]</span> Loading case file...</div>
+                    <div class="term-line delay-2"><span class="term-ok">[OK]</span> Case loaded successfully</div>
+                    <div class="term-line delay-3"><span class="term-separator">═══════════════════════════════════════════</span></div>
+                    <div class="term-line delay-4"><span class="term-label">CASE:</span> CASE TITLE</div>
+                    <div class="term-line delay-5"><span class="term-label">DATE:</span> YYYY-MM-DD HH:MM UTC+X</div>
+                    <div class="term-line delay-6"><span class="term-label">PLATFORM:</span> PLATFORM NAME</div>
+                    <div class="term-line delay-7"><span class="term-label">THREAT ACTOR:</span> ACTOR HANDLE / UNKNOWN</div>
+                    <div class="term-line delay-8"><span class="term-label">DATA VOLUME:</span> X MB / X records</div>
+                    <div class="term-line delay-9"><span class="term-label">EXPOSURE:</span> X views | X replies</div>
+                    <div class="term-line delay-10"><span class="term-label">RECURRENCE:</span> DESCRIPTION</div>
+                    <div class="term-line delay-11"><span class="term-separator">═══════════════════════════════════════════</span></div>
+                    <div class="term-line delay-12"><span class="term-warn">[!]</span> Compromised data: FIELD, FIELD, FIELD</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── 2. Attack Vector Analysis ────────────────────── -->
+        <div class="analysis-section">
+            <h3 class="analysis-title">
+                <span class="title-icon">[>>]</span>
+                <span>Attack Vector Analysis</span>
+            </h3>
+            <div class="attack-flow">
+                <div class="flow-node" data-delay="0">
+                    <div class="node-label">Target</div>
+                    <div class="node-detail">TARGET SYSTEM</div>
+                    <div class="node-sub">target.domain.com</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node" data-delay="1">
+                    <div class="node-label">Method</div>
+                    <div class="node-detail">ATTACK METHOD</div>
+                    <div class="node-sub">Description</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node" data-delay="2">
+                    <div class="node-label">Extraction</div>
+                    <div class="node-detail">EXTRACTION METHOD</div>
+                    <div class="node-sub">Data format / scope</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node" data-delay="3">
+                    <div class="node-label">Exfiltration</div>
+                    <div class="node-detail">DESTINATION PLATFORM</div>
+                    <div class="node-sub">Volume  Exposure</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── 3. Technical Analysis ─────────────────────────── -->
+        <div class="analysis-section">
+            <h3 class="analysis-title">
+                <span class="title-icon">[&&]</span>
+                <span>Technical Analysis</span>
+            </h3>
+
+            <!-- Evidence block  duplicate this block for each piece of evidence -->
+            <div class="evidence-block">
+                <div class="evidence-header">
+                    <span class="evidence-tag">EVIDENCE</span>
+                    <span class="evidence-id">Evidence title / identifier</span>
+                </div>
+                <div class="evidence-terminal">
+                    <div class="terminal-bar">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">evidence_file.ext</span>
+                    </div>
+                    <pre class="evidence-code"><span class="code-comment">// Anonymized sample</span>
+{
+    "field": "value"
+}
+
+<span class="code-comment">// Key indicator: explain what stands out</span></pre>
+                </div>
+            </div>
+
+            <!-- Technical Indicators Grid -->
+            <div class="indicators-grid">
+                <div class="indicator-card">
+                    <div class="indicator-icon">[TAG]</div>
+                    <h4>Indicator Category 1</h4>
+                    <ul class="indicator-list">
+                        <li><code>indicator-1</code></li>
+                        <li><code>indicator-2</code></li>
+                        <li><code>indicator-3</code></li>
+                    </ul>
+                </div>
+                <div class="indicator-card">
+                    <div class="indicator-icon">[TAG]</div>
+                    <h4>Indicator Category 2</h4>
+                    <ul class="indicator-list">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </div>
+                <div class="indicator-card">
+                    <div class="indicator-icon">[TAG]</div>
+                    <h4>Indicator Category 3</h4>
+                    <ul class="indicator-list">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </div>
+                <div class="indicator-card">
+                    <div class="indicator-icon">[LVL]</div>
+                    <h4>Sophistication Level</h4>
+                    <div class="sophistication-bar">
+                        <div class="soph-fill" style="width: 50%"></div>
+                    </div>
+                    <span class="soph-label">MEDIUM  Description</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── 4. Hypotheses ──────────────────────────────────── -->
+        <div class="analysis-section">
+            <h3 class="analysis-title">
+                <span class="title-icon">[??]</span>
+                <span>Attack Hypotheses</span>
+            </h3>
+            <div class="hypothesis-list">
+                <div class="hypothesis">
+                    <span class="hyp-num">H1</span>
+                    <div class="hyp-content">
+                        <strong>Hypothesis Title</strong>
+                        <p>Description of this attack hypothesis and supporting evidence.</p>
+                    </div>
+                    <span class="hyp-confidence high">HIGH</span>
+                </div>
+                <div class="hypothesis">
+                    <span class="hyp-num">H2</span>
+                    <div class="hyp-content">
+                        <strong>Hypothesis Title</strong>
+                        <p>Description of this attack hypothesis and supporting evidence.</p>
+                    </div>
+                    <span class="hyp-confidence medium">MEDIUM</span>
+                </div>
+                <div class="hypothesis">
+                    <span class="hyp-num">H3</span>
+                    <div class="hyp-content">
+                        <strong>Hypothesis Title</strong>
+                        <p>Description of this attack hypothesis and supporting evidence.</p>
+                    </div>
+                    <span class="hyp-confidence low">LOW</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── 5. Post-Incident Action Plan ──────────────────── -->
+        <div class="analysis-section">
+            <h3 class="analysis-title">
+                <span class="title-icon">[!!]</span>
+                <span>Post-Incident Action Plan</span>
+            </h3>
+            <div class="action-timeline">
+
+                <!-- Immediate (0-24h) -->
+                <div class="timeline-block">
+                    <div class="timeline-marker urgent"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-badge urgent">0-24H  IMMEDIATE</span>
+                        </div>
+                        <div class="timeline-grid">
+                            <!-- FILL: Add/remove action-card blocks as needed -->
+                            <div class="action-card">
+                                <h5>Containment</h5>
+                                <ul>
+                                    <li>Action item 1</li>
+                                    <li>Action item 2</li>
+                                    <li>Action item 3</li>
+                                </ul>
+                            </div>
+                            <div class="action-card">
+                                <h5>Notification</h5>
+                                <ul>
+                                    <li>Action item 1</li>
+                                    <li>Action item 2</li>
+                                    <li>Action item 3</li>
+                                </ul>
+                            </div>
+                            <div class="action-card">
+                                <h5>Investigation</h5>
+                                <ul>
+                                    <li>Action item 1</li>
+                                    <li>Action item 2</li>
+                                    <li>Action item 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Short-term (1-7 days) -->
+                <div class="timeline-block">
+                    <div class="timeline-marker warning"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-badge warning">1-7 DAYS  SHORT TERM</span>
+                        </div>
+                        <div class="timeline-grid">
+                            <div class="action-card">
+                                <h5>Mitigation</h5>
+                                <ul>
+                                    <li>Action item 1</li>
+                                    <li>Action item 2</li>
+                                    <li>Action item 3</li>
+                                </ul>
+                            </div>
+                            <div class="action-card">
+                                <h5>Monitoring</h5>
+                                <ul>
+                                    <li>Action item 1</li>
+                                    <li>Action item 2</li>
+                                    <li>Action item 3</li>
+                                </ul>
+                            </div>
+                            <div class="action-card">
+                                <h5>User Protection</h5>
+                                <ul>
+                                    <li>Action item 1</li>
+                                    <li>Action item 2</li>
+                                    <li>Action item 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medium-term (1-4 weeks) -->
+                <div class="timeline-block">
+                    <div class="timeline-marker info"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-badge info">1-4 WEEKS  MEDIUM TERM</span>
+                        </div>
+                        <div class="timeline-grid">
+                            <div class="action-card">
+                                <h5>Security Audit</h5>
+                                <ul>
+                                    <li>Action item 1</li>
+                                    <li>Action item 2</li>
+                                    <li>Action item 3</li>
+                                </ul>
+                            </div>
+                            <div class="action-card">
+                                <h5>Governance</h5>
+                                <ul>
+                                    <li>Action item 1</li>
+                                    <li>Action item 2</li>
+                                    <li>Action item 3</li>
+                                </ul>
+                            </div>
+                            <div class="action-card">
+                                <h5>Transformation</h5>
+                                <ul>
+                                    <li>Action item 1</li>
+                                    <li>Action item 2</li>
+                                    <li>Action item 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── 6. Threat Actor Profile ────────────────────────── -->
+        <!-- REMOVE this section entirely if the actor is unknown -->
+        <div class="analysis-section">
+            <h3 class="analysis-title">
+                <span class="title-icon">[ID]</span>
+                <span>Threat Actor Profile</span>
+            </h3>
+            <div class="actor-card">
+                <div class="actor-header">
+                    <!-- FILL: Actor initials (2 chars) -->
+                    <div class="actor-avatar">TA</div>
+                    <div class="actor-info">
+                        <!-- FILL: Actor handle and platform -->
+                        <span class="actor-handle">actor-handle</span>
+                        <span class="actor-platform">Platform Name</span>
+                    </div>
+                </div>
+                <div class="actor-stats">
+                    <!-- FILL: Known stats about the actor -->
+                    <div class="actor-stat">
+                        <span class="actor-stat-num">?</span>
+                        <span class="actor-stat-label">Known Leaks</span>
+                    </div>
+                    <div class="actor-stat">
+                        <span class="actor-stat-num">?</span>
+                        <span class="actor-stat-label">Reputation Score</span>
+                    </div>
+                    <div class="actor-stat">
+                        <!-- FILL: Month Year -->
+                        <span class="actor-stat-num">MMM YYYY</span>
+                        <span class="actor-stat-label">Account Created</span>
+                    </div>
+                </div>
+                <!-- REMOVE or fill this block if no notable quote exists -->
+                <div class="actor-note">
+                    <span class="actor-note-icon">[>]</span>
+                    <!-- FILL: Notable quote from the actor -->
+                    <blockquote>"Actor quote or notable statement"</blockquote>
+                    <!-- FILL: Context for the quote -->
+                    <span class="actor-note-context"> Context / source of the quote</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <span class="footer-prompt">mateo@portfolio:~$&nbsp;</span>
+            <span class="footer-item"><span class="footer-key" data-i18n="footerStatus">STATUS</span>: <span class="footer-val" data-i18n="footerStatusVal">OPEN TO WORK</span></span>
+            <span class="footer-sep">//</span>
+            <span class="footer-item"><span class="footer-key" data-i18n="footerLocation">LOCATION</span>: <span class="footer-val">NICE, FRANCE</span></span>
+            <span class="footer-sep">//</span>
+            <span class="footer-item"><span class="footer-key" data-i18n="footerYear">YEAR</span>: <span class="footer-val">2026</span></span>
+            <span class="footer-cursor">_</span>
+        </div>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/investigations.js"></script>
+    <script src="../js/chat.js"></script>
+</body>
+</html>

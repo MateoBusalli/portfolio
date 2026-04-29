@@ -46,14 +46,14 @@
         <div class="dfir-hero-content">
             <div class="dfir-badge">[CLASSIFIED]</div>
             <h1 id="dfir-typewriter" class="dfir-title" style="color: #ffffff;"></h1>
-            <p class="dfir-subtitle" data-i18n="dfirSubtitle">Digital Forensics & Incident Response — Workstation</p>
+            <p class="dfir-subtitle" data-i18n="dfirSubtitle">Digital Forensics &amp; Incident Response  Workstation</p>
             <div class="dfir-status-bar">
                 <span class="status-dot active"></span>
                 <span data-i18n="dfirStatus">OPERATOR: MATÉO BUSALLI</span>
                 <span class="status-sep">|</span>
                 <span data-i18n="dfirClearance">CLEARANCE: ACADEMIC RESEARCH</span>
                 <span class="status-sep">|</span>
-                <span data-i18n="dfirFramework">FRAMEWORK: LEGAL & ETHICAL OSINT</span>
+                <span data-i18n="dfirFramework">FRAMEWORK: LEGAL &amp; ETHICAL OSINT</span>
             </div>
         </div>
     </section>
@@ -76,7 +76,7 @@
                 <span class="fs-path">/home/investigator/cases/</span>
             </div>
 
-            <!-- Case Folder -->
+            <!-- Case Folder: Epitech Leak  Jan 2026 -->
             <div class="case-folder" id="case-epitech-2026">
                 <div class="folder-header" onclick="toggleCase('case-epitech-2026')">
                     <div class="folder-icon">[DIR]</div>
@@ -88,7 +88,7 @@
                             <span class="folder-classification">ACADEMIC RESEARCH</span>
                         </div>
                     </div>
-                    <div class="folder-chevron">▶</div>
+                    <div class="folder-chevron">&#9658;</div>
                 </div>
 
                 <div class="folder-content">
@@ -111,7 +111,7 @@
                                 <div class="term-line delay-1"><span class="term-info">[INFO]</span> <span data-i18n="caseLoading">Loading case file...</span></div>
                                 <div class="term-line delay-2"><span class="term-ok">[OK]</span> <span data-i18n="caseLoaded">Case loaded successfully</span></div>
                                 <div class="term-line delay-3"><span class="term-separator">═══════════════════════════════════════════</span></div>
-                                <div class="term-line delay-4"><span class="term-label" data-i18n="caseName">CASE:</span> <span data-i18n="caseNameVal">Epitech Data Leak — January 2026</span></div>
+                                <div class="term-line delay-4"><span class="term-label" data-i18n="caseName">CASE:</span> <span data-i18n="caseNameVal">Epitech Data Leak  January 2026</span></div>
                                 <div class="term-line delay-5"><span class="term-label" data-i18n="caseDate">DATE:</span> 2026-01-22 18:16 UTC+1</div>
                                 <div class="term-line delay-6"><span class="term-label" data-i18n="casePlatform">PLATFORM:</span> Breachforums</div>
                                 <div class="term-line delay-7"><span class="term-label" data-i18n="caseActor">THREAT ACTOR:</span> telaviv</div>
@@ -124,317 +124,19 @@
                         </div>
                     </div>
 
-                    <!-- Attack Vector Analysis -->
-                    <div class="analysis-section">
-                        <h3 class="analysis-title">
-                            <span class="title-icon">[>>]</span>
-                            <span data-i18n="attackVector">Attack Vector Analysis</span>
-                        </h3>
-
-                        <div class="attack-flow">
-                            <div class="flow-node" data-delay="0">
-                                <div class="node-label" data-i18n="flowTarget">Target</div>
-                                <div class="node-detail">Azure AD B2B</div>
-                                <div class="node-sub">epitechfr.onmicrosoft.com</div>
-                            </div>
-                            <div class="flow-arrow">→</div>
-                            <div class="flow-node" data-delay="1">
-                                <div class="node-label" data-i18n="flowMethod">Method</div>
-                                <div class="node-detail">Microsoft Graph API</div>
-                                <div class="node-sub" data-i18n="flowAbuse">API Abuse / Token Theft</div>
-                            </div>
-                            <div class="flow-arrow">→</div>
-                            <div class="flow-node" data-delay="2">
-                                <div class="node-label" data-i18n="flowExtraction">Extraction</div>
-                                <div class="node-detail" data-i18n="flowAutoExport">Automated JSON Export</div>
-                                <div class="node-sub">Directory.Read.All</div>
-                            </div>
-                            <div class="flow-arrow">→</div>
-                            <div class="flow-node" data-delay="3">
-                                <div class="node-label" data-i18n="flowExfil">Exfiltration</div>
-                                <div class="node-detail">Breachforums</div>
-                                <div class="node-sub">5.4 MB — 1422 views</div>
-                            </div>
-                        </div>
+                    <!-- Link to full case page -->
+                    <div class="case-open-link">
+                        <a href="investigations/epitech-leak-jan2026.html" class="case-open-btn">
+                            <span class="term-prompt">$</span>
+                            <span data-i18n="openCase">open case →</span>
+                        </a>
                     </div>
-
-                    <!-- Technical Deep Dive -->
-                    <div class="analysis-section">
-                        <h3 class="analysis-title">
-                            <span class="title-icon">[&&]</span>
-                            <span data-i18n="techAnalysis">Technical Analysis</span>
-                        </h3>
-
-                        <!-- Evidence: JSON Sample -->
-                        <div class="evidence-block">
-                            <div class="evidence-header">
-                                <span class="evidence-tag" data-i18n="evidenceTag">EVIDENCE</span>
-                                <span class="evidence-id">#EXT# Pattern — Guest Account Sample</span>
-                            </div>
-                            <div class="evidence-terminal">
-                                <div class="terminal-bar">
-                                    <div class="terminal-dots">
-                                        <span class="dot red"></span>
-                                        <span class="dot yellow"></span>
-                                        <span class="dot green"></span>
-                                    </div>
-                                    <span class="terminal-title">sample_data.json</span>
-                                </div>
-                                <pre class="evidence-code"><span class="code-comment">// Anonymized sample — B2B Guest Account pattern</span>
-<span class="json-bracket">{</span>
-    <span class="json-key">"email"</span>: <span class="json-string">"alice.Martin_example.fr<span class="highlight-ext">#EXT#</span>@demo.onmicrosoft.com"</span>,
-    <span class="json-key">"nom"</span>: <span class="json-string">"Alice Martin"</span>,
-    <span class="json-key">"phone"</span>: <span class="json-string">"+33612345678"</span>
-<span class="json-bracket">}</span>
-
-<span class="code-comment">// Key indicator: #EXT# suffix = Azure AD B2B Guest</span>
-<span class="code-comment">// Host tenant: epitechfr.onmicrosoft.com</span>
-<span class="code-comment">// Origin domain: @iseg.fr (external partner)</span></pre>
-                            </div>
-                        </div>
-
-                        <!-- Technical Indicators Grid -->
-                        <div class="indicators-grid">
-                            <div class="indicator-card">
-                                <div class="indicator-icon">[API]</div>
-                                <h4 data-i18n="indApiScopes">Suspected API Scopes</h4>
-                                <ul class="indicator-list">
-                                    <li><code>Directory.Read.All</code></li>
-                                    <li><code>User.Read.All</code></li>
-                                    <li><code>Contacts.Read</code></li>
-                                </ul>
-                            </div>
-                            <div class="indicator-card">
-                                <div class="indicator-icon">[CMD]</div>
-                                <h4 data-i18n="indTools">Possible Tooling</h4>
-                                <ul class="indicator-list">
-                                    <li>Connect-MgGraph (PowerShell)</li>
-                                    <li>Graph Explorer</li>
-                                    <li data-i18n="indCustomScript">Custom REST API Script</li>
-                                </ul>
-                            </div>
-                            <div class="indicator-card">
-                                <div class="indicator-icon">[LOG]</div>
-                                <h4 data-i18n="indForensic">Forensic Indicators</h4>
-                                <ul class="indicator-list">
-                                    <li data-i18n="indJson">Homogeneous JSON format</li>
-                                    <li data-i18n="indExt">#EXT# pattern (Azure AD guests)</li>
-                                    <li data-i18n="indNoErrors">No parsing errors (automated)</li>
-                                </ul>
-                            </div>
-                            <div class="indicator-card">
-                                <div class="indicator-icon">[LVL]</div>
-                                <h4 data-i18n="indSophist">Sophistication Level</h4>
-                                <div class="sophistication-bar">
-                                    <div class="soph-fill" style="width: 50%"></div>
-                                </div>
-                                <span class="soph-label" data-i18n="indMedium">MEDIUM — Clean automated extraction, not brute scraping</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Hypotheses -->
-                    <div class="analysis-section">
-                        <h3 class="analysis-title">
-                            <span class="title-icon">[??]</span>
-                            <span data-i18n="hypotheses">Attack Hypotheses</span>
-                        </h3>
-                        <div class="hypothesis-list">
-                            <div class="hypothesis">
-                                <span class="hyp-num">H1</span>
-                                <div class="hyp-content">
-                                    <strong data-i18n="h1Title">Malicious OAuth Application</strong>
-                                    <p data-i18n="h1Desc">Rogue app with admin/user consent granting excessive directory read permissions</p>
-                                </div>
-                                <span class="hyp-confidence high" data-i18n="confHigh">HIGH</span>
-                            </div>
-                            <div class="hypothesis">
-                                <span class="hyp-num">H2</span>
-                                <div class="hyp-content">
-                                    <strong data-i18n="h2Title">Compromised Graph API Token</strong>
-                                    <p data-i18n="h2Desc">Stolen access token with Directory.Read.All and User.Read.All scopes</p>
-                                </div>
-                                <span class="hyp-confidence high" data-i18n="confHigh2">HIGH</span>
-                            </div>
-                            <div class="hypothesis">
-                                <span class="hyp-num">H3</span>
-                                <div class="hyp-content">
-                                    <strong data-i18n="h3Title">Automated Export Pipeline</strong>
-                                    <p data-i18n="h3Desc">PowerShell/REST script chaining Graph API calls for mass directory extraction</p>
-                                </div>
-                                <span class="hyp-confidence medium" data-i18n="confMedium">MEDIUM</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Post-Incident Action Plan -->
-                    <div class="analysis-section">
-                        <h3 class="analysis-title">
-                            <span class="title-icon">[!!]</span>
-                            <span data-i18n="actionPlan">Post-Incident Action Plan</span>
-                        </h3>
-
-                        <!-- Timeline -->
-                        <div class="action-timeline">
-                            <!-- Immediate -->
-                            <div class="timeline-block">
-                                <div class="timeline-marker urgent"></div>
-                                <div class="timeline-content">
-                                    <div class="timeline-header">
-                                        <span class="timeline-badge urgent" data-i18n="immediate">0-24H — IMMEDIATE</span>
-                                    </div>
-                                    <div class="timeline-grid">
-                                        <div class="action-card">
-                                            <h5 data-i18n="containment">Containment</h5>
-                                            <ul>
-                                                <li data-i18n="act1">Block suspected access in logs</li>
-                                                <li data-i18n="act2">Disable vulnerable public endpoints</li>
-                                                <li data-i18n="act3">Implement strict API rate limiting</li>
-                                                <li data-i18n="act4">Activate WAF anti-scraping rules</li>
-                                            </ul>
-                                        </div>
-                                        <div class="action-card">
-                                            <h5 data-i18n="notification">Notification</h5>
-                                            <ul>
-                                                <li data-i18n="act5">Notify CNIL within 72h (GDPR)</li>
-                                                <li data-i18n="act6">Prepare user communications</li>
-                                                <li data-i18n="act7">Inform legal team & DPO</li>
-                                                <li data-i18n="act8">Alert internal teams</li>
-                                            </ul>
-                                        </div>
-                                        <div class="action-card">
-                                            <h5 data-i18n="forensicInv">Investigation</h5>
-                                            <ul>
-                                                <li data-i18n="act9">Extract web server logs</li>
-                                                <li data-i18n="act10">Identify exact attack vector</li>
-                                                <li data-i18n="act11">Establish complete timeline</li>
-                                                <li data-i18n="act12">Verify system integrity</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Short-term -->
-                            <div class="timeline-block">
-                                <div class="timeline-marker warning"></div>
-                                <div class="timeline-content">
-                                    <div class="timeline-header">
-                                        <span class="timeline-badge warning" data-i18n="shortTerm">1-7 DAYS — SHORT TERM</span>
-                                    </div>
-                                    <div class="timeline-grid">
-                                        <div class="action-card">
-                                            <h5 data-i18n="antiScraping">Anti-Scraping</h5>
-                                            <ul>
-                                                <li data-i18n="act13">Deploy CAPTCHA on sensitive pages</li>
-                                                <li data-i18n="act14">Implement honeypots for bots</li>
-                                                <li data-i18n="act15">Require authentication for profile access</li>
-                                                <li data-i18n="act16">Obfuscate public PII</li>
-                                            </ul>
-                                        </div>
-                                        <div class="action-card">
-                                            <h5 data-i18n="monitoring">Monitoring</h5>
-                                            <ul>
-                                                <li data-i18n="act17">Alert on anomalous request patterns</li>
-                                                <li data-i18n="act18">Advanced bot fingerprinting</li>
-                                                <li data-i18n="act19">Dark web forum monitoring</li>
-                                                <li data-i18n="act20">Force MFA on privileged accounts</li>
-                                            </ul>
-                                        </div>
-                                        <div class="action-card">
-                                            <h5 data-i18n="userProtection">User Protection</h5>
-                                            <ul>
-                                                <li data-i18n="act21">Individual notification to affected users</li>
-                                                <li data-i18n="act22">Recommend password changes</li>
-                                                <li data-i18n="act23">Phishing awareness alerts</li>
-                                                <li data-i18n="act24">Identity theft protection resources</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Medium-term -->
-                            <div class="timeline-block">
-                                <div class="timeline-marker info"></div>
-                                <div class="timeline-content">
-                                    <div class="timeline-header">
-                                        <span class="timeline-badge info" data-i18n="mediumTerm">1-4 WEEKS — MEDIUM TERM</span>
-                                    </div>
-                                    <div class="timeline-grid">
-                                        <div class="action-card">
-                                            <h5 data-i18n="secAudit">Security Audit</h5>
-                                            <ul>
-                                                <li data-i18n="act25">External pentest engagement</li>
-                                                <li data-i18n="act26">Full vulnerability scan</li>
-                                                <li data-i18n="act27">Security architecture review</li>
-                                                <li data-i18n="act28">GDPR compliance verification</li>
-                                            </ul>
-                                        </div>
-                                        <div class="action-card">
-                                            <h5 data-i18n="governance">Governance</h5>
-                                            <ul>
-                                                <li data-i18n="act29">Security incident registry</li>
-                                                <li data-i18n="act30">Updated risk matrix</li>
-                                                <li data-i18n="act31">Incident response procedures</li>
-                                                <li data-i18n="act32">DevOps security training</li>
-                                            </ul>
-                                        </div>
-                                        <div class="action-card">
-                                            <h5 data-i18n="longTransform">Transformation</h5>
-                                            <ul>
-                                                <li data-i18n="act33">Zero Trust Architecture</li>
-                                                <li data-i18n="act34">Least Privilege Principle</li>
-                                                <li data-i18n="act35">End-to-end encryption</li>
-                                                <li data-i18n="act36">Privacy by Design</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Actor Profile -->
-                    <div class="analysis-section">
-                        <h3 class="analysis-title">
-                            <span class="title-icon">[ID]</span>
-                            <span data-i18n="actorProfile">Threat Actor Profile</span>
-                        </h3>
-                        <div class="actor-card">
-                            <div class="actor-header">
-                                <div class="actor-avatar">TA</div>
-                                <div class="actor-info">
-                                    <span class="actor-handle">telaviv</span>
-                                    <span class="actor-platform">Breachforums</span>
-                                </div>
-                            </div>
-                            <div class="actor-stats">
-                                <div class="actor-stat">
-                                    <span class="actor-stat-num">31</span>
-                                    <span class="actor-stat-label" data-i18n="actorLeaks">Known Leaks</span>
-                                </div>
-                                <div class="actor-stat">
-                                    <span class="actor-stat-num">50</span>
-                                    <span class="actor-stat-label" data-i18n="actorRep">Reputation Score</span>
-                                </div>
-                                <div class="actor-stat">
-                                    <span class="actor-stat-num">Dec 2025</span>
-                                    <span class="actor-stat-label" data-i18n="actorJoined">Account Created</span>
-                                </div>
-                            </div>
-                            <div class="actor-note">
-                                <span class="actor-note-icon">[>]</span>
-                                <blockquote data-i18n="actorQuote">"Protect your data." Has the CNIL actually done anything today? NO</blockquote>
-                                <span class="actor-note-context" data-i18n="actorContext">— Accompanied by CNIL logo, indicating anti-regulatory stance</span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </div>
 
+            <!-- ── END OF CASE FOLDERS ─────────────────────────── -->
+
+        </div>
     </section>
 
     <!-- Footer -->

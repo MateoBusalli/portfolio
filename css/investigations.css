@@ -1,8 +1,5 @@
-/* =============================================
-   DFIR LAB — Immersive Investigations Stylesheet
-   ============================================= */
+/* DFIR LAB  Immersive Investigations Stylesheet */
 
-/* Scanline CRT overlay */
 .scanline-overlay {
     position: fixed;
     top: 0;
@@ -308,7 +305,6 @@
 .json-key { color: #5e9eff; }
 .json-string { color: #00ff41; }
 
-/* Section Header Terminal */
 .section-header-terminal {
     background: var(--bg-darker);
     padding: 0.75rem 1rem;
@@ -317,7 +313,6 @@
     margin-bottom: 1.5rem;
 }
 
-/* Virtual File System */
 .file-system {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -507,14 +502,14 @@
 .term-label { color: var(--primary); font-weight: 600; min-width: 14ch; display: inline-block; }
 .term-separator { color: var(--border); }
 
-/* Terminal line animation delays */
 .term-output .term-line {
     opacity: 0;
     transform: translateX(-5px);
     transition: opacity 0.3s, transform 0.3s;
 }
 
-.case-folder.open .term-output .term-line.visible {
+.case-folder.open .term-output .term-line.visible,
+.case-page-content .term-output .term-line.visible {
     opacity: 1;
     transform: translateX(0);
 }
@@ -1107,7 +1102,6 @@
     line-height: 1.7;
 }
 
-/* Active nav */
 .nav-active {
     color: var(--primary) !important;
     text-shadow: 0 0 8px var(--primary);
@@ -1203,6 +1197,236 @@ body.light-mode .indicator-list code {
     background: rgba(0, 102, 0, 0.05);
 }
 
+body.light-mode .case-terminal,
+body.light-mode .evidence-terminal {
+    background: #0d0d0d;
+    border-color: #333;
+}
+
+body.light-mode .terminal-bar {
+    background: #1a1a1a;
+    border-bottom-color: #333;
+}
+
+body.light-mode .terminal-body {
+    background: #0d0d0d;
+    color: #cccccc;
+}
+
+body.light-mode .term-cmd,
+body.light-mode .term-separator {
+    color: #cccccc;
+}
+
+body.light-mode .evidence-code {
+    background: #0d0d0d;
+    color: #cccccc;
+}
+
 body.light-mode .scanline-overlay {
     display: none;
 }
+
+/* case index Card Grid */
+
+.cases-index {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.case-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.case-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    transition: var(--transition);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.case-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+}
+
+.case-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.case-card-header .folder-icon {
+    color: var(--primary);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.case-card-header .folder-name {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-light);
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.case-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.case-card-meta {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-lighter);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.meta-sep {
+    color: var(--border);
+}
+
+.case-card-desc {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+.case-card-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+    align-self: flex-start;
+}
+
+.case-card-footer {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--primary);
+    text-align: right;
+    margin-top: auto;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-light);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.case-card:hover .case-card-footer {
+    opacity: 1;
+}
+
+/* case page  Breadcrumb & Hero */
+
+.case-breadcrumb {
+    background: var(--bg-darker);
+    border-bottom: 1px solid var(--border);
+    padding: 0.6rem 2rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-lighter);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.breadcrumb-back {
+    color: var(--primary);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.breadcrumb-back:hover {
+    opacity: 0.75;
+    text-decoration: underline;
+}
+
+.breadcrumb-sep {
+    color: var(--border);
+}
+
+.breadcrumb-current {
+    color: var(--text-light);
+}
+
+.case-page-hero {
+    background: var(--bg-darker);
+    border-bottom: 2px solid var(--primary);
+    padding: 2.5rem 2rem 2rem;
+    text-align: center;
+}
+
+.case-page-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.case-page-content {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.case-page-content .file-system {
+    padding: 1.25rem;
+}
+
+
+/* case index  "Open Case" Button */
+
+.case-open-link {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-light);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.case-open-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--primary);
+    text-decoration: none;
+    border: 1px solid var(--primary);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    letter-spacing: 0.03em;
+}
+
+.case-open-btn:hover {
+    background: var(--primary);
+    color: #000;
+    box-shadow: var(--shadow-glow);
+}
+

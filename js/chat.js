@@ -1,4 +1,4 @@
-// Chat Widget — CLI Terminal Style
+// Chat Widget  CLI Terminal Style
 (function () {
     const FORMSPREE_URL = 'https://formspree.io/f/mkgqyobr';
 
