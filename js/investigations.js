@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    // ── Boot Sequence ──────────────────────────────
+    //   Boot Sequence                               
     const bootLines = [
         { text: 'BIOS POST... OK', cls: 'boot-ok' },
         { text: 'Initializing DFIR Workstation v3.2.1', cls: '' },
@@ -16,7 +16,7 @@
         { text: 'Verifying operator credentials...', cls: '' },
         { text: '[OK] CLEARANCE: ACADEMIC RESEARCH', cls: 'boot-ok' },
         { text: '[OK] LEGAL FRAMEWORK: ACTIVE', cls: 'boot-ok' },
-        { text: '═══════════════════════════════════════', cls: '' },
+        { text: '', cls: '' },
         { text: 'WORKSTATION READY  Welcome, Investigator.', cls: 'boot-ok' },
     ];
 
@@ -70,7 +70,7 @@
         return div.innerHTML;
     }
 
-    // ── Page Init ──────────────────────────────────
+    //   Page Init                                   
     function initPage() {
         initGridCanvas();
         initDfirTypewriter();
@@ -78,7 +78,7 @@
         initScrollAnimations();
     }
 
-    // ── Title Typewriter ───────────────────────
+    //   Title Typewriter                        
     function initDfirTypewriter() {
         const el = document.getElementById('dfir-typewriter');
         if (!el) return;
@@ -100,7 +100,7 @@
         setTimeout(type, 300);
     }
 
-    // ── Grid Canvas Background ─────────────────────
+    //   Grid Canvas Background                     
     function initGridCanvas() {
         const canvas = document.getElementById('grid-canvas');
         if (!canvas) return;
@@ -180,7 +180,7 @@
         draw();
     }
 
-    // ── Typed Command Animation ────────────────────
+    //   Typed Command Animation                    
     function initTypedCommands() {
         const commands = document.querySelectorAll('.typed-cmd[data-type]');
         commands.forEach((el) => {
@@ -213,7 +213,7 @@
         }, 50);
     }
 
-    // ── Scroll Animations ──────────────────────────
+    //   Scroll Animations                           
     function initScrollAnimations() {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -246,7 +246,7 @@
         });
     }
 
-    // ── Case Folder Toggle ─────────────────────────
+    //   Case Folder Toggle                         
     window.toggleCase = function (id) {
         const folder = document.getElementById(id);
         if (!folder) return;
@@ -276,7 +276,7 @@
         }
     };
 
-    // ── Start ──────────────────────────────────────
+    //   Start                                       
     window.addEventListener('load', () => {
         runBootSequence();
     });

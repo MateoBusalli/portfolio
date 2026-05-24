@@ -254,7 +254,7 @@
         function updateNav(idx) {
             const lang = (typeof i18n !== 'undefined') ? i18n.getCurrentLang() : 'en';
             if (idx === null) {
-                document.getElementById('cab-label').textContent   = '─── SELECT A FILE ───';
+                document.getElementById('cab-label').textContent   = '   SELECT A FILE   ';
                 document.getElementById('cab-counter').textContent = '00 / 04';
             } else {
                 document.getElementById('cab-label').textContent   = NAMES[idx][lang] || PROJECTS[idx].name;
@@ -481,7 +481,7 @@
             { cls: 'td', text: '', delay: 120 },
             { cls: 'ti', text: '[*] OWASP Juice Shop // Epitech Hack & Juice 2025', delay: 180 },
             { cls: 'ti', text: '[*] Player   : Matéo Busalli  |  Rank: 1st campus / 15th overall', delay: 300 },
-            { cls: 'td', text: '─────────────────────────────────────────', delay: 420 },
+            { cls: 'td', text: '', delay: 420 },
             { cls: 't',  text: '[~] Loading completed challenges...', delay: 520 },
             { cls: 'td', text: '', delay: 650 },
             { cls: 'ti', text: '[INJECTION]         ★★★  Login Admin (SQL injection)', delay: 750 },
@@ -495,7 +495,7 @@
             { cls: 'ti', text: '[ACCESS CTRL]       ★★★★ Easter Egg', delay: 1800 },
             { cls: 'tf', text: '[INSEC. DESERIAL.]  ★★★★★★ Successful RCE/DoS', delay: 1950 },
             { cls: 'td', text: '', delay: 2080 },
-            { cls: 'td', text: '─────────────────────────────────────────', delay: 2180 },
+            { cls: 'td', text: '', delay: 2180 },
             { cls: 'tg', text: '[✓] 50+ challenges completed (difficulty ≥ 3)', delay: 2300 },
             { cls: 'tg', text: '[✓] 9 OWASP categories covered', delay: 2420 },
             { cls: 'tg', text: '[✓] Tools: bruteforce.js, regex_wordlist.py', delay: 2540 },
