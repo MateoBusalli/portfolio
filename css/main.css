@@ -40,6 +40,15 @@
         margin-right: 0;
     }
 }
+/* Desktop: nav always visible */
+@media (min-width: 901px) {
+    .nav {
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: auto !important;
+    }
+}
+
 /* Burger menu styles */
 .burger {
     display: none;
