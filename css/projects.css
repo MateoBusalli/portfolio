@@ -1,9 +1,29 @@
 
+.cab-scene-wrap {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+    .cab-scene-wrap {
+        height: calc(592px * var(--cab-scale, 1));
+        align-items: flex-start;
+    }
+    .cab-scene {
+        transform-origin: top center;
+        transform: scale(var(--cab-scale, 1));
+    }
+}
+
 .cab-scene {
     position: relative;
     width: 980px;
     height: 592px;
-    margin: 0 auto;
+    flex-shrink: 0;
+    transform-origin: top center;
     overflow: hidden;
     user-select: none;
     z-index: 0;

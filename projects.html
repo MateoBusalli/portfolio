@@ -15,7 +15,12 @@
     <header class="header">
         <div class="header-content">
             <a href="index.html" class="logo"><span>Intelligence Notice</span></a>
-            <nav class="nav">
+            <button class="burger" id="burger-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+            </button>
+            <nav class="nav" id="nav-menu">
                 <a href="index.html" data-i18n="home">Home</a>
                 <a href="candidate.html" data-i18n="profile">Profile</a>
                 <a href="investigations.html" data-i18n="investigations">Investigations</a>
@@ -35,6 +40,7 @@
             <p style="color:var(--text-lighter);font-size:11px;letter-spacing:2px;text-transform:uppercase;" data-i18n="demoSubtitle">Select a case file to open</p>
         </section>
 
+        <div class="cab-scene-wrap" id="cab-scene-wrap">
         <div class="cab-scene" id="cab-scene">
 
             <div class="pf" data-idx="3">
@@ -192,6 +198,7 @@
             </div>
             </div>
         </div>
+        </div><!-- /.cab-scene-wrap -->
 
         <div class="cab-nav">
             <button class="cab-btn" id="btn-prev" onclick="cabinet.prev()" title="Previous (←)">&#8249;</button>
@@ -218,6 +225,7 @@
     </footer>
 
     <script src="./js/i18n.js"></script>
+    <script src="./js/burger.js"></script>
     <script src="./js/chat.js"></script>
     <script>
 
@@ -629,11 +637,22 @@
         type();
     }
 
+    function updateCabScale() {
+        const wrap = document.getElementById('cab-scene-wrap');
+        if (!wrap) return;
+        const avail = wrap.parentElement.clientWidth || window.innerWidth;
+        const scale = Math.min(1, avail / 980);
+        document.documentElement.style.setProperty('--cab-scale', scale);
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
         cabinet.init();
         todoApp.init();
         terminalDemo.init();
         railChart.init();
+
+        updateCabScale();
+        window.addEventListener('resize', updateCabScale);
 
         const lang = (typeof i18n !== 'undefined') ? i18n.getCurrentLang() : 'en';
         const title = lang === 'fr' ? 'Démos de Projets' : 'Project Demos';
