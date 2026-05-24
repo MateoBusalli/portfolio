@@ -220,6 +220,60 @@ body {
     display: flex;
     flex-direction: column;
     padding-bottom: 3.5rem;
+    position: relative;
+    isolation: isolate;
+}
+
+/* ── CRT EFFECT ── */
+
+/* 2. Scanlines défilantes */
+body::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -100vh;
+    height: 200vh;
+    pointer-events: none;
+    z-index: -2;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent      0px,
+        transparent      2px,
+        rgba(0,0,0,0.18) 2px,
+        rgba(0,0,0,0.18) 3px
+    );
+    animation: crtScanlines 30s linear infinite;
+}
+
+@keyframes crtScanlines {
+    from { transform: translateY(0); }
+    to   { transform: translateY(100vh); }
+}
+
+/* 3. Ligne de balayage — même z-index que les scanlines */
+.crt-beam {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 60px;
+    pointer-events: none;
+    z-index: -2;
+    background: linear-gradient(
+        to bottom,
+        transparent              0%,
+        rgba(255,255,255,0.008) 30%,
+        rgba(255,255,255,0.028) 50%,
+        rgba(255,255,255,0.008) 70%,
+        transparent             100%
+    );
+    animation: crtBeam 12s linear infinite;
+}
+
+@keyframes crtBeam {
+    from { transform: translateY(-60px); }
+    to   { transform: translateY(100vh); }
 }
 
 /* Header */

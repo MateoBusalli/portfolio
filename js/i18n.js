@@ -15,6 +15,7 @@ const translations = {
         investigationsCard: 'Investigations',
         investigationsDesc: 'Digital Forensics & Incident Response case files',
         contact: 'Contact',
+        playground: 'Playground',
 
         // Demos Page
         demoPageTitle: 'Matéo Busalli - Project Demos',
@@ -302,6 +303,7 @@ const translations = {
         investigationsCard: 'Enquêtes',
         investigationsDesc: 'Forensique numérique & réponse aux incidents  dossiers d\'enquête',
         contact: 'Contact',
+        playground: 'Playground',
 
         // Page Démos
         demoPageTitle: 'Matéo Busalli - Démos de Projets',
