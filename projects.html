@@ -333,28 +333,29 @@
 
             f.classList.add('cover-open'); // cover swings open (0.72s keyframe)
 
-            // Sheet slides back behind the clip edge (x=372) — no fade, no z-index tricks.
-            // Cover starts closing at the same time so folder closes as sheet retreats.
+            // Sheet slides back first (mirror of open: cover opens → sheet comes out)
+            // then cover closes once sheet is back inside.
             setTimeout(() => {
-                // Use 0.45s ease to match the cover-close transition duration,
-                // so the sheet disappears behind the clip just as the cover closes.
-                sheet.style.transition = 'transform 0.45s ease';
-                scene().classList.remove('has-open'); // sheet retreats via CSS transform
-                closeCover(f);                        // cover closes simultaneously (0.45s ease)
-                setTimeout(() => { sheet.style.transition = ''; }, 500);
+                sheet.style.transition = 'transform 0.62s cubic-bezier(0.22, 1, 0.36, 1)';
+                scene().classList.remove('has-open'); // sheet retreats
+                setTimeout(() => { sheet.style.transition = ''; }, 680);
+
+                setTimeout(() => {
+                    closeCover(f); // cover closes after sheet is back inside
+                }, 680);
             }, 600);
 
-            // Folder returns to pile after cover has closed
+            // Folder returns to pile after cover has closed (600 + 680 sheet + 450 cover close)
             setTimeout(() => {
                 f.classList.remove('is-side');
                 activeIdx = null;
                 updateNav(null);
-            }, 1200);
+            }, 1800);
 
             setTimeout(() => {
                 busy = false;
                 if (callback) callback();
-            }, 1750);
+            }, 2200);
         }
 
         function doSwap(newIdx) {
