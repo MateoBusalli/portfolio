@@ -72,6 +72,7 @@ const translations = {
         hrDocsTitle: 'Documents',
         hrDownloadCV: '↓ Download CV (PDF)',
         hrContactBtn: '→ Send a Job Opportunity',
+        hrCvLabel: 'MATEO_BUSALLI_CV.pdf',
 
         // Home Page
         welcome: 'Welcome to My Portfolio',
@@ -360,6 +361,7 @@ const translations = {
         hrDocsTitle: 'Documents',
         hrDownloadCV: '↓ Télécharger le CV (PDF)',
         hrContactBtn: '→ Envoyer une Opportunité',
+        hrCvLabel: 'MATEO_BUSALLI_CV.pdf',
 
         // Home Page
         welcome: 'Bienvenue sur Mon Portfolio',
@@ -561,6 +563,7 @@ const translations = {
         ethicalText: 'La collecte de renseignements se limite strictement aux sources publiquement accessibles. Le traitement des données suit le principe du besoin d\'en connaître. Tous les résultats sont transmis via les canaux appropriés (coordination OFAC, PJ possible).',
 
         // Contact Page
+        contactTitle: 'Formulaire d\'Opportunité',
         contactSubtitle: 'Veuillez remplir ce formulaire pour proposer une opportunité professionnelle',
         recruiterEmail: 'Email du Recruteur',
         companyName: 'Nom de l\'Entreprise',
@@ -576,10 +579,15 @@ const translations = {
     }
 };
 
+function getSystemLang() {
+    const lang = navigator.language || navigator.languages?.[0] || 'en';
+    return lang.startsWith('fr') ? 'fr' : 'en';
+}
+
 // Language Manager
 class I18n {
     constructor() {
-        this.currentLang = localStorage.getItem('language') || 'en';
+        this.currentLang = localStorage.getItem('language') || getSystemLang();
     }
 
     setLanguage(lang) {
@@ -630,7 +638,9 @@ const i18n = new I18n();
 // Theme Manager
 class Theme {
     constructor() {
-        this.current = localStorage.getItem('theme') || 'dark';
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        this.current = stored || (prefersDark ? 'dark' : 'light');
     }
 
     apply() {

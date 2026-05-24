@@ -9,7 +9,7 @@
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-<script>if(localStorage.getItem('theme')==='light')document.body.classList.add('light-mode');</script>
+<script>var _t=localStorage.getItem('theme')||(!window.matchMedia||window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(_t==='light')document.body.classList.add('light-mode');</script>
     <!-- Header -->
     <header class="header">
         <div class="header-content">
@@ -142,13 +142,26 @@
         <section class="section">
             <div class="card">
                 <h3 class="section-title" data-i18n="hrDocsTitle">Documents</h3>
-                <div class="grid grid-2" style="margin-top: 1.5rem; gap: 1rem;">
-                    <a href="./Mat%C3%A9o_BUSALLI_CV.pdf" download class="btn" style="text-align:center;" data-i18n="hrDownloadCV">
+                <div style="margin-top: 1.5rem; display:flex; gap: 1rem; flex-wrap:wrap; width:100%;">
+                    <a href="./Mat%C3%A9o_BUSALLI_CV.pdf" download class="btn" style="text-align:center;flex:1;min-width:200px;" data-i18n="hrDownloadCV">
                         ↓ Download CV (PDF)
                     </a>
-                    <a href="contact.html" class="btn" style="text-align:center;" data-i18n="hrContactBtn">
+                    <a href="contact.html" class="btn" style="text-align:center;flex:1;min-width:200px;" data-i18n="hrContactBtn">
                         → Send a Job Opportunity
                     </a>
+                </div>
+                <div style="margin-top: 2rem;width:100%;">
+                    <div style="border:1px solid var(--accent);border-radius:4px;overflow:hidden;box-shadow:0 0 24px rgba(180,0,0,0.15);">
+                        <div style="background:var(--accent);padding:0.5rem 1rem;display:flex;align-items:center;gap:0.75rem;">
+                            <span style="display:flex;gap:0.4rem;">
+                                <span style="width:10px;height:10px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
+                                <span style="width:10px;height:10px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
+                                <span style="width:10px;height:10px;border-radius:50%;background:#28c840;display:inline-block;"></span>
+                            </span>
+                            <span style="font-family:var(--font-mono);font-size:0.75rem;color:#000;letter-spacing:0.08em;" data-i18n="hrCvLabel">MATEO_BUSALLI_CV.pdf</span>
+                        </div>
+                        <iframe src="./Mat%C3%A9o_BUSALLI_CV.pdf" style="width:100%;height:780px;border:none;display:block;" title="CV Matéo Busalli"></iframe>
+                    </div>
                 </div>
             </div>
         </section>

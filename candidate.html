@@ -9,7 +9,7 @@
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-<script>if(localStorage.getItem('theme')==='light')document.body.classList.add('light-mode');</script>
+<script>var _t=localStorage.getItem('theme')||(!window.matchMedia||window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(_t==='light')document.body.classList.add('light-mode');</script>
     <!-- Header -->
     <header class="header">
         <div class="header-content">
@@ -137,6 +137,7 @@
                 <div class="collapsible">
                     <div class="collapsible-header">
                         <span data-i18n="exp1Title">IT Technician</span>
+                        <span style="font-size:0.75rem;opacity:0.6;margin-left:auto;margin-right:0.5rem;font-family:var(--font-mono);">2023</span>
                         <span class="collapsible-icon">▼</span>
                     </div>
                     <div class="collapsible-content">
@@ -151,6 +152,7 @@
                 <div class="collapsible">
                     <div class="collapsible-header">
                         <span data-i18n="exp2Title">Construction Technical Inspector Assistant</span>
+                        <span style="font-size:0.75rem;opacity:0.6;margin-left:auto;margin-right:0.5rem;font-family:var(--font-mono);">2022</span>
                         <span class="collapsible-icon">▼</span>
                     </div>
                     <div class="collapsible-content">
