@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matéo Busalli - HR / Recruiter Page">
+    <title data-i18n="hrPageTitle">HR - Matéo Busalli</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<script>if(localStorage.getItem('theme')==='light')document.body.classList.add('light-mode');</script>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <span>Intelligence Notice</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" data-i18n="home">Home</a>
+                <a href="candidate.html" data-i18n="profile">Profile</a>
+                <a href="investigations.html" data-i18n="investigations">Investigations</a>
+                <a href="projects.html" data-i18n="demos">Demos</a>
+                <a href="hr.html" data-i18n="hr">HR</a>
+                <a href="contact.html" data-i18n="contact">Contact</a>
+                <button id="lang-toggle" class="lang-toggle" onclick="i18n.toggleLanguage()">FR</button>
+                <button id="theme-toggle" class="lang-toggle" onclick="theme.toggle()">[LIGHT]</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container" style="flex: 1;">
+
+        <!-- Page Title -->
+        <section class="section">
+            <h2 class="section-title"><span id="hr-typewriter"></span></h2>
+        </section>
+
+        <!-- Quick Summary Bar -->
+        <div class="stats-bar" style="margin-bottom: 3rem;">
+            <div class="stat-item">
+                <span class="stat-label" data-i18n="hrStatus">Status</span>
+                <span class="stat-number" style="font-size:1rem;" data-i18n="hrStatusVal">Internship</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label" data-i18n="hrAvailability">Availability</span>
+                <span class="stat-number" style="font-size:1rem;" data-i18n="hrAvailabilityVal">June 2026</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label" data-i18n="hrDuration">Duration</span>
+                <span class="stat-number" style="font-size:1rem;" data-i18n="hrDurationVal">6 months</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label" data-i18n="hrLocation">Location</span>
+                <span class="stat-number" style="font-size:1rem;">Nice, France</span>
+            </div>
+        </div>
+
+        <!-- Two-column layout -->
+        <div class="grid grid-2" style="margin-bottom: 3rem;">
+
+            <!-- Contract Details -->
+            <div class="card">
+                <h3 class="card-title" data-i18n="hrContractTitle">Contract Details</h3>
+                <div class="profile-info">
+                    <div class="info-item">
+                        <span class="info-label" data-i18n="hrContractType">Contract type</span>
+                        <span data-i18n="hrContractTypeVal">Internship / Apprenticeship</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label" data-i18n="hrStartDate">Start date</span>
+                        <span data-i18n="hrStartDateVal">June 2026</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label" data-i18n="hrDurationLabel">Duration</span>
+                        <span data-i18n="hrDurationVal">6 months</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label" data-i18n="hrMobility">Mobility</span>
+                        <span data-i18n="hrMobilityVal">Nice area</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label" data-i18n="hrDomains">Target domains</span>
+                        <span data-i18n="hrDomainsVal">Offensive Security, DFIR, SOC, Pentesting</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Motivation -->
+            <div class="card">
+                <h3 class="card-title" data-i18n="hrMotivationTitle">Motivation</h3>
+                <p class="card-text" data-i18n="hrMotivationText">
+                    Passionate cybersecurity student at EPITECH Nice, I am looking for an internship or apprenticeship in offensive security, DFIR or SOC analysis. I enjoy tackling real-world challenges, building tools, and continuously sharpening my technical skills in a professional environment.
+                </p>
+            </div>
+        </div>
+
+        <!-- Key Strengths -->
+        <section class="section">
+            <div class="card">
+                <h3 class="section-title" data-i18n="hrStrengthsTitle">Key Strengths</h3>
+                <div class="grid grid-3" style="margin-top: 1.5rem;">
+                    <div>
+                        <p class="info-label" data-i18n="hrStrength1Label">Technical</p>
+                        <div class="tags" style="margin-top: 0.5rem;">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">HTML/CSS/JS</span>
+                            <span class="tag">OSINT</span>
+                            <span class="tag">DFIR</span>
+                            <span class="tag">Wireshark</span>
+                            <span class="tag">Linux</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="info-label" data-i18n="hrStrength2Label">Soft Skills</p>
+                        <div class="tags" style="margin-top: 0.5rem;">
+                            <span class="tag" data-i18n="hrSkillAutonomous">Autonomous</span>
+                            <span class="tag" data-i18n="hrSkillCurious">Curious</span>
+                            <span class="tag" data-i18n="hrSkillRigorous">Rigorous</span>
+                            <span class="tag" data-i18n="hrSkillTeamwork">Team player</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="info-label" data-i18n="hrStrength3Label">Languages</p>
+                        <div class="tags" style="margin-top: 0.5rem;">
+                            <span class="tag" data-i18n="hrLangFR">French (native)</span>
+                            <span class="tag" data-i18n="hrLangEN">English (B1+)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documents -->
+        <section class="section">
+            <div class="card">
+                <h3 class="section-title" data-i18n="hrDocsTitle">Documents</h3>
+                <div class="grid grid-2" style="margin-top: 1.5rem; gap: 1rem;">
+                    <a href="./Mat%C3%A9o_BUSALLI_CV.pdf" download class="btn" style="text-align:center;" data-i18n="hrDownloadCV">
+                        ↓ Download CV (PDF)
+                    </a>
+                    <a href="contact.html" class="btn" style="text-align:center;" data-i18n="hrContactBtn">
+                        → Send a Job Opportunity
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <span class="footer-prompt">mateo@portfolio:~$&nbsp;</span>
+            <span class="footer-item"><span class="footer-key" data-i18n="footerStatus">STATUS</span>: <span class="footer-val" data-i18n="footerStatusVal">IN INTERNSHIP</span></span>
+            <span class="footer-sep">//</span>
+            <span class="footer-item"><span class="footer-key" data-i18n="footerLocation">LOCATION</span>: <span class="footer-val">NICE, FRANCE</span></span>
+            <span class="footer-sep">//</span>
+            <span class="footer-item"><span class="footer-key" data-i18n="footerYear">YEAR</span>: <span class="footer-val">2026</span></span>
+            <span class="footer-cursor">_</span>
+        </div>
+    </footer>
+
+    <script src="./js/i18n.js"></script>
+    <script src="./js/hr-config.js"></script>
+    <script src="./js/chat.js"></script>
+    <script>
+        (function() {
+            const el = document.getElementById('hr-typewriter');
+            if (!el) return;
+            const text = i18n && i18n.t ? i18n.t('hrPageTitle') : 'HR — Recruiter Page';
+            let i = 0;
+            function type() {
+                if (i <= text.length) {
+                    el.textContent = text.slice(0, i) + (i < text.length ? '_' : '');
+                    i++;
+                    setTimeout(type, 60);
+                }
+            }
+            type();
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matéo Busalli - Project Demos">
+    <title data-i18n="demoPageTitle">Matéo Busalli - Project Demos</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/projects.css">
+</head>
+<body>
+<script>if(localStorage.getItem('theme')==='light')document.body.classList.add('light-mode');</script>
+
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo"><span>Intelligence Notice</span></a>
+            <nav class="nav">
+                <a href="index.html" data-i18n="home">Home</a>
+                <a href="candidate.html" data-i18n="profile">Profile</a>
+                <a href="investigations.html" data-i18n="investigations">Investigations</a>
+                <a href="projects.html" data-i18n="demos" class="nav-active">Demos</a>
+                <a href="hr.html" data-i18n="hr">HR</a>
+                <a href="contact.html" data-i18n="contact">Contact</a>
+                <button id="lang-toggle" class="lang-toggle" onclick="i18n.toggleLanguage()">FR</button>
+                <button id="theme-toggle" class="lang-toggle" onclick="theme.toggle()">[LIGHT]</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="flex:1; padding-bottom:6rem;">
+
+        <section class="section" style="margin-bottom:0.8rem;">
+            <h2 class="section-title"><span id="demos-typewriter"></span></h2>
+            <p style="color:var(--text-lighter);font-size:11px;letter-spacing:2px;text-transform:uppercase;" data-i18n="demoSubtitle">Select a case file to open</p>
+        </section>
+
+        <div class="cab-scene" id="cab-scene">
+
+            <div class="pf" data-idx="3">
+                <div class="pf-tab">Parcoursup</div>
+                <div class="pf-body">
+                    <div class="pf-cover">
+                        <span class="pf-clabel">Project File #04</span>
+                        <span class="pf-cnum">04</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pf" data-idx="2">
+                <div class="pf-tab">ReTardis</div>
+                <div class="pf-body">
+                    <div class="pf-cover">
+                        <span class="pf-clabel">Project File #03</span>
+                        <span class="pf-cnum">03</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pf" data-idx="1">
+                <div class="pf-tab">Hack &amp; Juice</div>
+                <div class="pf-body">
+                    <div class="pf-cover">
+                        <span class="pf-clabel">Project File #02</span>
+                        <span class="pf-cnum">02</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pf" data-idx="0">
+                <div class="pf-tab">ETodo</div>
+                <div class="pf-body">
+                    <div class="pf-cover">
+                        <span class="pf-clabel">Project File #01</span>
+                        <span class="pf-cnum">01</span>
+                    </div>
+                </div>
+            <div class="cab-sheet" id="cab-sheet">
+                <button class="sheet-x" id="sheet-x" title="Close" onclick="cabinet.close()">✕</button>
+
+                <div class="sp" data-for="0">
+                    <div class="demo-header">
+                        <div>
+                            <div class="demo-title">ETodo // Full-Stack Todo App</div>
+                            <div class="demo-tags" style="margin-top:5px;">
+                                <span class="demo-tag">React</span>
+                                <span class="demo-tag">Node.js</span>
+                                <span class="demo-tag">MariaDB</span>
+                                <span class="demo-tag">Docker</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/MateoBusalli/Etodo" target="_blank" rel="noopener" class="demo-gh">GitHub →</a>
+                    </div>
+                    <p style="font-family:var(--font-mono);font-size:10px;color:var(--text-lighter);margin:0 0 0.7rem;letter-spacing:1px;">w/ Hugo Abrino &nbsp;·&nbsp; JWT Auth · CRUD · Docker Compose · REST API</p>
+                    <div class="todo-app">
+                        <div class="todo-input-row">
+                            <input type="text" class="todo-input" id="todo-input" placeholder="New task..." maxlength="120" onkeydown="if(event.key==='Enter')todoApp.add()">
+                            <button class="todo-add" onclick="todoApp.add()" data-i18n="demoTodoAdd">+ ADD</button>
+                        </div>
+                        <ul class="todo-list" id="todo-list"></ul>
+                        <div class="todo-empty" id="todo-empty" data-i18n="demoTodoEmpty">// No tasks yet</div>
+                    </div>
+                </div>
+
+                <div class="sp" data-for="1">
+                    <div class="demo-header">
+                        <div>
+                            <div class="demo-title">Hack &amp; Juice // OWASP CTF</div>
+                            <div class="demo-tags" style="margin-top:5px;">
+                                <span class="demo-tag">Security</span>
+                                <span class="demo-tag">OWASP</span>
+                                <span class="demo-tag">CTF</span>
+                                <span class="demo-tag">JavaScript</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/MateoBusalli/Hack-Juice" target="_blank" rel="noopener" class="demo-gh">GitHub →</a>
+                    </div>
+                    <p style="font-family:var(--font-mono);font-size:10px;color:var(--text-lighter);margin:0 0 0.6rem;letter-spacing:1px;">🏆 1st campus · 15th overall &nbsp;·&nbsp; OWASP Juice Shop · Epitech 2025</p>
+                    <div class="term-wrap" id="term-output"></div>
+                    <div class="term-actions">
+                        <button class="term-btn" id="term-run-btn" onclick="terminalDemo.run()" data-i18n="demoTermRun">▶ RUN SIMULATION</button>
+                        <button class="term-btn" id="term-clear-btn" onclick="terminalDemo.clear()" data-i18n="demoTermClear">✕ CLEAR</button>
+                    </div>
+                </div>
+
+                <div class="sp" data-for="2">
+                    <div class="demo-header">
+                        <div>
+                            <div class="demo-title">SNCF ReTardis // Railway Analytics</div>
+                            <div class="demo-tags" style="margin-top:5px;">
+                                <span class="demo-tag">Python</span>
+                                <span class="demo-tag">Streamlit</span>
+                                <span class="demo-tag">Scikit-Learn</span>
+                                <span class="demo-tag">Navitia API</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/MateoBusalli/Tardis" target="_blank" rel="noopener" class="demo-gh">GitHub →</a>
+                    </div>
+                    <p style="font-family:var(--font-mono);font-size:10px;color:var(--text-lighter);margin:0 0 0.6rem;letter-spacing:1px;">w/ Thomas Derome, Juan Lopez &nbsp;·&nbsp; 10k+ liaisons · Linear / RF / Gradient Boosting</p>
+                    <div class="chart-section">
+                        <div class="chart-label" data-i18n="demoRailChart1">Average delay by line (minutes)</div>
+                        <div id="rail-bars-1"></div>
+                    </div>
+                    <div class="chart-section">
+                        <div class="chart-label" data-i18n="demoRailChart2">Delay frequency by cause (%)</div>
+                        <div id="rail-bars-2"></div>
+                    </div>
+                    <p class="chart-note" data-i18n="demoRailNote">* Illustrative data // real tool uses SNCF open dataset + Navitia real-time API</p>
+                </div>
+
+                <div class="sp" data-for="3">
+                    <div class="demo-header">
+                        <div>
+                            <div class="demo-title" data-i18n="demoDbTitle">Parcoursup SQL Database</div>
+                            <div class="demo-tags" style="margin-top:5px;">
+                                <span class="demo-tag">Python</span>
+                                <span class="demo-tag">SQL</span>
+                                <span class="demo-tag">Data</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="db-stats">
+                        <div class="db-stat"><span class="db-stat-num" data-count-up="36000">0</span><span class="db-stat-label" data-i18n="demoDbRows">Records</span></div>
+                        <div class="db-stat"><span class="db-stat-num" data-count-up="13">0</span><span class="db-stat-label" data-i18n="demoDbCols">Columns</span></div>
+                        <div class="db-stat"><span class="db-stat-num" data-count-up="2025">0</span><span class="db-stat-label" data-i18n="demoDbYear">Year</span></div>
+                        <div class="db-stat"><span class="db-stat-num" data-count-up="3">0</span><span class="db-stat-label" data-i18n="demoDbFormats">Formats</span></div>
+                    </div>
+                    <div class="db-query-box">
+                        <span class="sql-cm">-- Top 5 most competitive formations</span><br>
+                        <span class="sql-kw">SELECT</span> formation, filiere,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; taux_acces, nb_candidats<br>
+                        <span class="sql-kw">FROM</span> <span class="sql-tbl">parcoursup</span><br>
+                        <span class="sql-kw">ORDER BY</span> taux_acces <span class="sql-kw">ASC</span><br>
+                        <span class="sql-kw">LIMIT</span> <span class="sql-str">5</span>;
+                    </div>
+                    <div class="db-result">
+                        <table>
+                            <thead><tr>
+                                <th data-i18n="demoDbColFormation">Formation</th>
+                                <th data-i18n="demoDbColField">Field</th>
+                                <th data-i18n="demoDbColAccess">Access rate</th>
+                                <th data-i18n="demoDbColCandidates">Candidates</th>
+                            </tr></thead>
+                            <tbody>
+                                <tr><td>École Polytechnique</td><td>Engineering</td><td>3.2 %</td><td>12 450</td></tr>
+                                <tr><td>ENS Paris</td><td>Sciences</td><td>4.1 %</td><td>8 320</td></tr>
+                                <tr><td>Sciences Po Paris</td><td>Political Science</td><td>5.8 %</td><td>21 890</td></tr>
+                                <tr><td>HEC Paris</td><td>Business</td><td>6.3 %</td><td>15 760</td></tr>
+                                <tr><td>CentraleSupélec</td><td>Engineering</td><td>7.1 %</td><td>9 110</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+
+        <div class="cab-nav">
+            <button class="cab-btn" id="btn-prev" onclick="cabinet.prev()" title="Previous (←)">&#8249;</button>
+            <div style="text-align:center;">
+                <div class="cab-label" id="cab-label">// SELECT A FILE //</div>
+                <div class="cab-counter" id="cab-counter">00 / 04</div>
+            </div>
+            <button class="cab-btn" id="btn-next" onclick="cabinet.next()" title="Next (→)">&#8250;</button>
+        </div>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <span class="footer-prompt">mateo@portfolio:~$&nbsp;</span>
+            <span class="footer-item"><span class="footer-key" data-i18n="footerStatus">STATUS</span>: <span class="footer-val" data-i18n="footerStatusVal">IN INTERNSHIP</span></span>
+            <span class="footer-sep">//</span>
+            <span class="footer-item"><span class="footer-key" data-i18n="footerLocation">LOCATION</span>: <span class="footer-val">NICE, FRANCE</span></span>
+            <span class="footer-sep">//</span>
+            <span class="footer-item"><span class="footer-key" data-i18n="footerYear">YEAR</span>: <span class="footer-val">2026</span></span>
+            <span class="footer-cursor">_</span>
+        </div>
+    </footer>
+
+    <script src="./js/i18n.js"></script>
+    <script src="./js/chat.js"></script>
+    <script>
+
+    const PROJECTS = [
+        { id: 0, name: 'ETodo',          counter: '01 / 04' },
+        { id: 1, name: 'Hack & Juice',   counter: '02 / 04' },
+        { id: 2, name: 'SNCF ReTardis',  counter: '03 / 04' },
+        { id: 3, name: 'Parcoursup DB',  counter: '04 / 04' },
+    ];
+
+    const cabinet = (() => {
+        const scene  = () => document.getElementById('cab-scene');
+        const pf     = i  => document.querySelector(`.pf[data-idx="${i}"]`);
+        const panel  = i  => document.querySelector(`.sp[data-for="${i}"]`);
+
+        let activeIdx = null;
+        let busy = false;
+
+        const NAMES = {
+            0: { en: 'ETodo',          fr: 'ETodo' },
+            1: { en: 'Hack & Juice',   fr: 'Hack & Juice' },
+            2: { en: 'SNCF ReTardis',  fr: 'SNCF ReTardis' },
+            3: { en: 'Parcoursup DB',  fr: 'BDD Parcoursup' },
+        };
+
+        function updateNav(idx) {
+            const lang = (typeof i18n !== 'undefined') ? i18n.getCurrentLang() : 'en';
+            if (idx === null) {
+                document.getElementById('cab-label').textContent   = '─── SELECT A FILE ───';
+                document.getElementById('cab-counter').textContent = '00 / 04';
+            } else {
+                document.getElementById('cab-label').textContent   = NAMES[idx][lang] || PROJECTS[idx].name;
+                document.getElementById('cab-counter').textContent = PROJECTS[idx].counter;
+            }
+        }
+
+        function activatePanel(idx) {
+            document.querySelectorAll('.sp').forEach(p => p.classList.remove('active'));
+            const p = panel(idx);
+            if (p) p.classList.add('active');
+        }
+
+        function triggerDemo(idx) {
+            if (idx === 2) railChart.animate();
+            if (idx === 3) dbCountUp();
+        }
+
+        function closeCover(f) {
+            const cover = f.querySelector('.pf-cover');
+            if (!cover || !f.classList.contains('cover-open')) return;
+            const mat = window.getComputedStyle(cover).transform;
+            cover.style.transform = mat;      
+            f.classList.remove('cover-open'); 
+            cover.offsetWidth;                
+            cover.style.transform = '';       
+        }
+
+        function doOpen(idx) {
+            busy = true;
+            const f = pf(idx);
+            const sheet = document.getElementById('cab-sheet');
+            f.appendChild(sheet); // move sheet into this folder so cover hides/reveals it
+
+            const rotMap = ['rotate(0deg)', 'rotate(-3deg)', 'rotate(-6deg)', 'rotate(-9deg)'];
+
+            f.style.transition = 'transform 0.15s ease, box-shadow 0.15s ease';
+            f.style.transform  = `${rotMap[idx]} translateY(-14px) scale(1.04)`;
+            f.style.boxShadow  = '0 22px 44px rgba(255,0,0,0.32)';
+            f.style.zIndex     = '10';
+
+            setTimeout(() => {
+                activeIdx = idx;
+                activatePanel(idx);
+                updateNav(idx);
+                triggerDemo(idx);
+
+                setTimeout(() => {
+                    f.style.transition = '';
+                    f.style.boxShadow  = '';
+                    f.classList.add('cover-open');
+                    f.classList.add('is-side');
+                    f.style.transform  = '';
+                    f.style.zIndex     = '';
+                }, 16);
+
+                setTimeout(() => {
+                    sheet.style.transition = 'transform 0.62s cubic-bezier(0.22, 1, 0.36, 1)';
+                    scene().classList.add('has-open');
+                    setTimeout(() => { sheet.style.transition = ''; }, 700);
+
+                    setTimeout(() => {
+                        closeCover(f);
+                        setTimeout(() => { busy = false; }, 480);
+                    }, 680);
+                }, 770);
+
+            }, 110);
+        }
+
+        function doClose(callback) {
+            if (activeIdx === null) { if (callback) callback(); return; }
+            busy = true;
+            const f = pf(activeIdx);
+            const sheet = document.getElementById('cab-sheet');
+
+            f.classList.add('cover-open'); // cover swings open (0.72s keyframe)
+
+            // Sheet slides back behind the clip edge (x=372) — no fade, no z-index tricks.
+            // Cover starts closing at the same time so folder closes as sheet retreats.
+            setTimeout(() => {
+                // Use 0.45s ease to match the cover-close transition duration,
+                // so the sheet disappears behind the clip just as the cover closes.
+                sheet.style.transition = 'transform 0.45s ease';
+                scene().classList.remove('has-open'); // sheet retreats via CSS transform
+                closeCover(f);                        // cover closes simultaneously (0.45s ease)
+                setTimeout(() => { sheet.style.transition = ''; }, 500);
+            }, 600);
+
+            // Folder returns to pile after cover has closed
+            setTimeout(() => {
+                f.classList.remove('is-side');
+                activeIdx = null;
+                updateNav(null);
+            }, 1200);
+
+            setTimeout(() => {
+                busy = false;
+                if (callback) callback();
+            }, 1750);
+        }
+
+        function doSwap(newIdx) {
+            busy = true;
+            const oldF = pf(activeIdx);
+            const newF = pf(newIdx);
+            const sheet = document.getElementById('cab-sheet');
+
+            sheet.style.transition = 'opacity 0.2s ease';
+            sheet.style.opacity    = '0';
+
+            setTimeout(() => {
+                oldF.classList.remove('is-side');
+                newF.appendChild(sheet); // move sheet into the new folder
+                activatePanel(newIdx);
+                triggerDemo(newIdx);
+                activeIdx = newIdx;
+                updateNav(newIdx);
+
+                requestAnimationFrame(() => {
+                    newF.classList.add('is-side');
+                    // Fade sheet back in
+                    sheet.style.opacity = '1';
+                });
+
+                setTimeout(() => {
+                    sheet.style.transition = '';
+                    sheet.style.opacity    = '';
+                    busy = false;
+                }, 260);
+            }, 220);
+        }
+
+        function navigate(dir) {
+            if (busy) return;
+            if (activeIdx === null) {
+                doOpen(dir === 1 ? 0 : 3);
+            } else {
+                const next = (activeIdx + dir + 4) % 4;
+                doSwap(next);
+            }
+        }
+
+        return {
+            open:  idx => { if (!busy) (activeIdx === idx ? doClose(null) : activeIdx !== null ? doSwap(idx) : doOpen(idx)); },
+            close: ()  => doClose(null),
+            next:  ()  => navigate(1),
+            prev:  ()  => navigate(-1),
+            init() {
+                updateNav(null);
+                document.querySelectorAll('.pf').forEach(el => {
+                    el.addEventListener('click', e => {
+                        if (e.target.closest('.cab-sheet')) return; // sheet handles its own clicks
+                        const idx = parseInt(el.dataset.idx);
+                        if (el.classList.contains('is-side')) {
+                            doClose(null);  // click the side-folder to close
+                        } else if (!busy) {
+                            activeIdx !== null ? doSwap(idx) : doOpen(idx);
+                        }
+                    });
+                });
+                document.addEventListener('keydown', e => {
+                    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') navigate(1);
+                    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   navigate(-1);
+                    if (e.key === 'Escape') doClose(null);
+                });
+            }
+        };
+    })();
+
+    const todoApp = (() => {
+        let items = [
+            { text: 'Review pentest report', done: false },
+            { text: 'Update portfolio HR page', done: true },
+        ];
+
+        function render() {
+            const list = document.getElementById('todo-list');
+            const empty = document.getElementById('todo-empty');
+            if (!list) return;
+            list.innerHTML = '';
+            if (items.length === 0) {
+                empty.style.display = 'block';
+                return;
+            }
+            empty.style.display = 'none';
+            items.forEach((item, i) => {
+                const li = document.createElement('li');
+                li.className = 'todo-item' + (item.done ? ' done' : '');
+                li.innerHTML =
+                    `<div class="todo-check${item.done ? ' checked' : ''}" onclick="todoApp.toggle(${i})">${item.done ? '✓' : ''}</div>` +
+                    `<span class="todo-text">${escHtml(item.text)}</span>` +
+                    `<button class="todo-del" onclick="todoApp.del(${i})" title="Delete">✕</button>`;
+                list.appendChild(li);
+            });
+        }
+
+        function escHtml(s) {
+            return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        }
+
+        return {
+            add() {
+                const inp = document.getElementById('todo-input');
+                const val = inp.value.trim();
+                if (!val) return;
+                items.push({ text: val, done: false });
+                inp.value = '';
+                render();
+            },
+            toggle(i) { items[i].done = !items[i].done; render(); },
+            del(i)    { items.splice(i, 1); render(); },
+            init()    { render(); }
+        };
+    })();
+
+    const terminalDemo = (() => {
+        let running = false;
+        let timeouts = [];
+
+        const SCRIPT = [
+            { cls: 'tc', text: '$ node bruteforce.js --target juice-shop --wordlist passwords.txt', delay: 0 },
+            { cls: 'td', text: '', delay: 120 },
+            { cls: 'ti', text: '[*] OWASP Juice Shop // Epitech Hack & Juice 2025', delay: 180 },
+            { cls: 'ti', text: '[*] Player   : Matéo Busalli  |  Rank: 1st campus / 15th overall', delay: 300 },
+            { cls: 'td', text: '─────────────────────────────────────────', delay: 420 },
+            { cls: 't',  text: '[~] Loading completed challenges...', delay: 520 },
+            { cls: 'td', text: '', delay: 650 },
+            { cls: 'ti', text: '[INJECTION]         ★★★  Login Admin (SQL injection)', delay: 750 },
+            { cls: 'ti', text: '[INJECTION]         ★★★  Login Bender / Login Jim', delay: 900 },
+            { cls: 'tf', text: '[BROKEN AUTH]       ★★★★ Reset Bender\'s Password', delay: 1050 },
+            { cls: 'tf', text: '[BROKEN AUTH]       ★★★★ Change Bender\'s Password', delay: 1180 },
+            { cls: 'ti', text: '[DATA EXPOSURE]     ★★★★ Forgotten Dev Backup', delay: 1310 },
+            { cls: 'ti', text: '[DATA EXPOSURE]     ★★★★ Leaked API Key', delay: 1430 },
+            { cls: 'tf', text: '[CRYPTO]            ★★★★ Nested Easter Egg', delay: 1560 },
+            { cls: 'tf', text: '[CRYPTO]            ★★★★★★ Forged Coupon', delay: 1680 },
+            { cls: 'ti', text: '[ACCESS CTRL]       ★★★★ Easter Egg', delay: 1800 },
+            { cls: 'tf', text: '[INSEC. DESERIAL.]  ★★★★★★ Successful RCE/DoS', delay: 1950 },
+            { cls: 'td', text: '', delay: 2080 },
+            { cls: 'td', text: '─────────────────────────────────────────', delay: 2180 },
+            { cls: 'tg', text: '[✓] 50+ challenges completed (difficulty ≥ 3)', delay: 2300 },
+            { cls: 'tg', text: '[✓] 9 OWASP categories covered', delay: 2420 },
+            { cls: 'tg', text: '[✓] Tools: bruteforce.js, regex_wordlist.py', delay: 2540 },
+            { cls: 'tc', text: '$ _', delay: 2700, cursor: true },
+        ];
+
+        function appendLine(cls, text, cursor) {
+            const el = document.getElementById('term-output');
+            if (!el) return;
+            const line = document.createElement('div');
+            line.className = cls;
+            if (cursor) {
+                line.innerHTML = text.replace('_', '') + '<span class="term-cursor-inline"></span>';
+            } else {
+                line.textContent = text;
+            }
+            el.appendChild(line);
+            el.scrollTop = el.scrollHeight;
+        }
+
+        return {
+            run() {
+                if (running) return;
+                running = true;
+                document.getElementById('term-run-btn').disabled = true;
+                this.clear(true);
+
+                SCRIPT.forEach(({ cls, text, delay, cursor }) => {
+                    const t = setTimeout(() => {
+                        if (cursor) {
+                            running = false;
+                            document.getElementById('term-run-btn').disabled = false;
+                        }
+                        appendLine(cls, text, cursor);
+                    }, delay);
+                    timeouts.push(t);
+                });
+            },
+            clear(silent) {
+                timeouts.forEach(clearTimeout);
+                timeouts = [];
+                running = false;
+                const el = document.getElementById('term-output');
+                if (el) el.innerHTML = '';
+                if (!silent) {
+                    document.getElementById('term-run-btn').disabled = false;
+                }
+            },
+            init() {
+                const el = document.getElementById('term-output');
+                if (el) {
+                    const hint = document.createElement('div');
+                    hint.className = 'td';
+                    hint.textContent = '// Press RUN SIMULATION to start';
+                    el.appendChild(hint);
+                }
+            }
+        };
+    })();
+
+    const railChart = (() => {
+        const chart1 = [
+            { name: 'TGV Lyria', val: 4.2,  pct: 42,  cls: '' },
+            { name: 'Intercités', val: 7.8,  pct: 78,  cls: 'secondary' },
+            { name: 'TER PACA',   val: 12.3, pct: 100, cls: 'tertiary' },
+            { name: 'Transilien', val: 9.1,  pct: 91,  cls: 'secondary' },
+            { name: 'Ouigo',      val: 3.1,  pct: 31,  cls: '' },
+        ];
+        const chart2 = [
+            { name: 'Infrastructure',   val: '34 %', pct: 68,  cls: 'tertiary' },
+            { name: 'Rolling stock',    val: '22 %', pct: 44,  cls: 'secondary' },
+            { name: 'External causes',  val: '19 %', pct: 38,  cls: '' },
+            { name: 'Operations',       val: '14 %', pct: 28,  cls: '' },
+            { name: 'Other',            val: '11 %', pct: 22,  cls: 'secondary' },
+        ];
+
+        function buildBars(containerId, data) {
+            const c = document.getElementById(containerId);
+            if (!c) return;
+            c.innerHTML = '';
+            data.forEach(({ name, val, pct, cls }) => {
+                c.innerHTML +=
+                    `<div class="bar-row">
+                        <div class="bar-name">${name}</div>
+                        <div class="bar-track">
+                            <div class="bar-fill ${cls}" data-pct="${pct}"></div>
+                        </div>
+                        <div class="bar-val">${val}${typeof val === 'number' ? ' min' : ''}</div>
+                    </div>`;
+            });
+        }
+
+        let animated = false;
+        return {
+            init() {
+                buildBars('rail-bars-1', chart1);
+                buildBars('rail-bars-2', chart2);
+            },
+            animate() {
+                if (animated) return;
+                animated = true;
+                setTimeout(() => {
+                    document.querySelectorAll('.sp[data-for="2"] .bar-fill').forEach(el => {
+                        el.style.width = el.dataset.pct + '%';
+                    });
+                }, 80);
+            }
+        };
+    })();
+
+    let dbCounted = false;
+    function dbCountUp() {
+        if (dbCounted) return;
+        dbCounted = true;
+        document.querySelectorAll('[data-count-up]').forEach(el => {
+            const target = parseInt(el.dataset.countUp);
+            const dur = 1200;
+            const step = 16;
+            const inc = target / (dur / step);
+            let cur = 0;
+            const iv = setInterval(() => {
+                cur = Math.min(cur + inc, target);
+                el.textContent = Math.floor(cur).toLocaleString();
+                if (cur >= target) clearInterval(iv);
+            }, step);
+        });
+    }
+
+    function startTypewriter(elId, text, speed) {
+        const el = document.getElementById(elId);
+        if (!el) return;
+        let i = 0;
+        function type() {
+            if (i <= text.length) {
+                el.textContent = text.slice(0, i) + (i < text.length ? '_' : '');
+                i++;
+                setTimeout(type, speed);
+            }
+        }
+        type();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        cabinet.init();
+        todoApp.init();
+        terminalDemo.init();
+        railChart.init();
+
+        const lang = (typeof i18n !== 'undefined') ? i18n.getCurrentLang() : 'en';
+        const title = lang === 'fr' ? 'Démos de Projets' : 'Project Demos';
+        startTypewriter('demos-typewriter', title, 65);
+    });
+    </script>
+</body>
+</html>
