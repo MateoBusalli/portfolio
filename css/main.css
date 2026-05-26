@@ -238,10 +238,10 @@ body::after {
     z-index: -2;
     background: repeating-linear-gradient(
         to bottom,
-        transparent      0px,
-        transparent      2px,
-        rgba(0,0,0,0.18) 2px,
-        rgba(0,0,0,0.18) 3px
+        transparent              0px,
+        transparent              2px,
+        rgba(255,255,255,0.045)  2px,
+        rgba(255,255,255,0.045)  3px
     );
     animation: crtScanlines 30s linear infinite;
 }
