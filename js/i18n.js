@@ -57,9 +57,9 @@ const translations = {
         hrMobility: 'Mobility',
         hrMobilityVal: 'Nice area',
         hrDomains: 'Target domains',
-        hrDomainsVal: 'Offensive Security, DFIR, SOC, Pentesting',
+        hrDomainsVal: 'DFIR, Digital Forensics, Incident Response, Trace Analysis',
         hrMotivationTitle: 'Motivation',
-        hrMotivationText: 'Passionate cybersecurity student at EPITECH Nice, I am looking for an internship or apprenticeship in offensive security, DFIR or SOC analysis. I enjoy tackling real-world challenges, building tools, and continuously sharpening my technical skills in a professional environment.',
+        hrMotivationText: 'Cybersecurity student at EPITECH Nice, I am looking for an internship or apprenticeship focused on DFIR, SOC analysis, or incident response. I enjoy investigating security incidents, understanding attack techniques from a defender\'s perspective, and building tools that support defensive operations.',
         hrStrengthsTitle: 'Key Strengths',
         hrStrength1Label: 'Technical',
         hrStrength2Label: 'Soft Skills',
@@ -89,7 +89,7 @@ const translations = {
 
         // Home - About Section
         aboutLabel: '// About Me',
-        aboutText: 'Cybersecurity student at EPITECH Nice, passionate about offensive security, network analysis, and building tools that make systems safer. Currently pursuing a BAC+5 Master of Science with a specialization in cybersecurity. Always looking for new challenges and opportunities to grow.',
+        aboutText: 'Cybersecurity student at EPITECH Nice, focused on Digital Forensics & Incident Response, network analysis, and building tools that support defensive security investigations. Currently pursuing a BAC+5 Master of Science with a specialization in cybersecurity. Always looking for new challenges and opportunities to grow.',
 
         // Home - Stats
         statProjects: 'Projects',
@@ -122,6 +122,7 @@ const translations = {
         skillsTitle: 'Skills',
         codingLang: 'Coding Language',
         spokenLang: 'Spoken Language',
+        securityLabel: 'Security & DFIR',
 
         experiencesTitle: 'Experiences',
         exp1Title: 'IT Technician',
@@ -145,7 +146,7 @@ const translations = {
         proj4Desc: 'Participation to the ActInSpace hackathon 2026 edition.',
         proj4Tech: 'We finished at the 4th position.',
         proj5Title: 'Hack & Juice (JuiceShop hacking competition)',
-        proj5Desc: 'Participation to Epitech\'s Hack & Juice event.',
+        proj5Desc: 'Participation to Epitech\'s Hack & Juice CTF. Hands-on identification of web vulnerabilities on OWASP JuiceShop, building practical knowledge of attack patterns relevant to forensic analysis and incident response.',
         proj5Tech: 'I finished 1st on my campus and 15th overall.',
         proj6Title: 'Todo List app',
         proj6Desc: 'A simple Todo List application built with JavaScript, HTML, and CSS.',
@@ -347,9 +348,9 @@ const translations = {
         hrMobility: 'Mobilité',
         hrMobilityVal: 'Région niçoise // ouvert au télétravail',
         hrDomains: 'Domaines visés',
-        hrDomainsVal: 'Sécurité offensive, DFIR, SOC, Pentest',
+        hrDomainsVal: 'DFIR, Forensique numérique, Réponse aux incidents, Analyse de traces numériques',
         hrMotivationTitle: 'Motivation',
-        hrMotivationText: 'Étudiant en cybersécurité passionné à EPITECH Nice, je recherche un stage ou une alternance en sécurité offensive, DFIR ou analyse SOC. J\'aime relever des défis concrets, développer des outils et affiner mes compétences techniques en environnement professionnel.',
+        hrMotivationText: 'Étudiant en cybersécurité à EPITECH Nice, je recherche un stage ou une alternance axé sur le DFIR, l\'analyse SOC ou la réponse aux incidents. J\'aime investiguer des incidents de sécurité, comprendre les techniques d\'attaque dans une perspective défensive et développer des outils au service de l\'analyse forensique.',
         hrStrengthsTitle: 'Points Forts',
         hrStrength1Label: 'Technique',
         hrStrength2Label: 'Savoir-être',
@@ -379,7 +380,7 @@ const translations = {
 
         // Home - About Section
         aboutLabel: '// À Propos',
-        aboutText: 'Étudiant en cybersécurité à EPITECH Nice, passionné par la sécurité offensive, l\'analyse réseau et le développement d\'outils qui rendent les systèmes plus sûrs. Actuellement en cursus BAC+5 Master of Science avec spécialisation en cybersécurité. Toujours à la recherche de nouveaux défis et opportunités de développement.',
+        aboutText: 'Étudiant en cybersécurité à EPITECH Nice, orienté vers la forensique numérique, la réponse aux incidents et l\'analyse réseau. Je développe des outils au service de la sécurité défensive dans le cadre d\'un cursus BAC+5 Master of Science spécialisé en cybersécurité. Toujours à la recherche de nouveaux défis et opportunités de développement.',
 
         // Home - Stats
         statProjects: 'Projets',
@@ -412,6 +413,7 @@ const translations = {
         skillsTitle: 'Compétences',
         codingLang: 'Langages codés',
         spokenLang: 'Langages parlés',
+        securityLabel: 'Sécurité & DFIR',
 
         experiencesTitle: 'Expériences',
         exp1Title: 'Technicien Informatique',
@@ -435,7 +437,7 @@ const translations = {
         proj4Desc: 'Participation à l\'édition 2026 du hackathon ActInSpace.',
         proj4Tech: 'Nous avons terminé à la 4ème position.',
         proj5Title: 'Hack & Juice (Compétition de hacking  JuiceShop)',
-        proj5Desc: 'Participation à l\'événement Hack & Juice d\'Epitech.',
+        proj5Desc: 'Participation au CTF Hack & Juice d\'Epitech. Identification de vulnérabilités web sur OWASP JuiceShop — approche axée sur la compréhension des vecteurs d\'attaque dans une perspective d\'analyse forensique et de réponse aux incidents.',
         proj5Tech: 'J\'ai terminé à la 1ère position de mon campus et 15ème au global.',
         proj6Title: 'Application de liste de tâches',
         proj6Desc: 'Une simple application de liste de tâches construite avec JavaScript, HTML et CSS.',
