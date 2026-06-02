@@ -294,7 +294,7 @@
 
             f.style.transition = 'transform 0.15s ease, box-shadow 0.15s ease';
             f.style.transform  = `${rotMap[idx]} translateY(-14px) scale(1.04)`;
-            f.style.boxShadow  = '0 22px 44px rgba(255,0,0,0.32)';
+            f.style.boxShadow  = `0 22px 44px rgba(${getComputedStyle(document.documentElement).getPropertyValue('--primary-rgb').trim()},0.32)`;
             f.style.zIndex     = '10';
 
             setTimeout(() => {

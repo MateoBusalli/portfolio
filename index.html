@@ -254,7 +254,7 @@
                 const isLight = document.body.classList.contains('light-mode');
                 ctx.fillStyle = isLight ? 'rgba(245, 245, 245, 0.1)' : 'rgba(10, 10, 10, 0.1)';
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
-                ctx.fillStyle = '#ff0000';
+                ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--primary').trim();
                 ctx.font = fontSize + 'px monospace';
 
                 for (let i = 0; i < drops.length; i++) {

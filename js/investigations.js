@@ -127,9 +127,10 @@
         }
 
         function draw() {
+            const rgb = getComputedStyle(document.documentElement).getPropertyValue('--primary-rgb').trim();
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            ctx.strokeStyle = 'rgba(255, 0, 0, 0.06)';
+            ctx.strokeStyle = `rgba(${rgb}, 0.06)`;
             ctx.lineWidth = 1;
             const gridSize = 40;
 
@@ -156,7 +157,7 @@
 
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+                ctx.fillStyle = `rgba(${rgb}, 0.5)`;
                 ctx.fill();
 
                 for (let j = i + 1; j < particles.length; j++) {
@@ -169,7 +170,7 @@
                         ctx.beginPath();
                         ctx.moveTo(p.x, p.y);
                         ctx.lineTo(p2.x, p2.y);
-                        ctx.strokeStyle = 'rgba(255, 0, 0, ' + (1 - dist / 120) * 0.3 + ')';
+                        ctx.strokeStyle = `rgba(${rgb}, ${(1 - dist / 120) * 0.3})`;
                         ctx.stroke();
                     }
                 }
